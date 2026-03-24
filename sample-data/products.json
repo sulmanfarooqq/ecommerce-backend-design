@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Classic White T-Shirt",
+    "price": 19.99,
+    "category": "Apparel",
+    "brand": "BasicStyle",
+    "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000&auto=format&fit=crop",
+    "description": "A comfortable and versatile white t-shirt made from 100% cotton.",
+    "stock": 50,
+    "rating": 4.5,
+    "featured": true
+  },
+  {
+    "name": "Leather Chelsea Boots",
+    "price": 89.99,
+    "category": "Footwear",
+    "brand": "UrbanStep",
+    "image": "https://images.unsplash.com/photo-1638247025967-b4e38f787b76?q=80&w=1000&auto=format&fit=crop",
+    "description": "Stylish and durable leather boots perfect for any occasion.",
+    "stock": 20,
+    "rating": 4.8,
+    "featured": true
+  },
+  {
+    "name": "Canvas Backpack",
+    "price": 45.00,
+    "category": "Accessories",
+    "brand": "TrailBlaze",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1000&auto=format&fit=crop",
+    "description": "A rugged canvas backpack with multiple compartments for all your gear.",
+    "stock": 30,
+    "rating": 4.2,
+    "featured": false
+  },
+  {
+    "name": "Modern Wristwatch",
+    "price": 120.00,
+    "category": "Accessories",
+    "brand": "TimeKeep",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1000&auto=format&fit=crop",
+    "description": "A sleek and minimal wristwatch with a stainless steel band.",
+    "stock": 15,
+    "rating": 4.7,
+    "featured": true
+  },
+  {
+    "name": "Denim Jacket",
+    "price": 65.00,
+    "category": "Apparel",
+    "brand": "DenimCo",
+    "image": "https://images.unsplash.com/photo-1527010150264-770002cd3632?q=80&w=1000&auto=format&fit=crop",
+    "description": "A classic denim jacket with a comfortable fit and vintage look.",
+    "stock": 25,
+    "rating": 4.4,
+    "featured": false
+  },
+  {
+    "name": "Wireless Headphones",
+    "price": 150.00,
+    "category": "Electronics",
+    "brand": "SoundWave",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop",
+    "description": "High-quality wireless headphones with active noise cancellation.",
+    "stock": 10,
+    "rating": 4.9,
+    "featured": true
+  },
+  {
+    "name": "Polarized Sunglasses",
+    "price": 35.00,
+    "category": "Accessories",
+    "brand": "SunGuard",
+    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=1000&auto=format&fit=crop",
+    "description": "Stylish polarized sunglasses that provide 100% UV protection.",
+    "stock": 40,
+    "rating": 4.3,
+    "featured": false
+  },
+  {
+    "name": "Running Shoes",
+    "price": 75.00,
+    "category": "Footwear",
+    "brand": "FastTrack",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000&auto=format&fit=crop",
+    "description": "Lightweight and breathable running shoes for maximum performance.",
+    "stock": 35,
+    "rating": 4.6,
+    "featured": false
+  }
+]

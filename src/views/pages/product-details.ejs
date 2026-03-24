@@ -1,0 +1,82 @@
+<%- contentFor('body') %> <%# Start of the specific content for the product details layout %>
+
+<!-- Breadcrumbs: Path discovery for easy navigation back to categories -->
+<nav class="breadcrumbs" style="margin-bottom: 2rem; color: var(--gray-600); font-size: 0.9rem;"> <%# Display the path to the current product within the site store taxonomy %>
+  Home <i class="fas fa-chevron-right" style="font-size: 0.7rem; margin: 0 0.5rem;"></i> <%# Site root level %>
+  Clothings <i class="fas fa-chevron-right" style="font-size: 0.7rem; margin: 0 0.5rem;"></i> <%# Parent category level as shown in mockup prototypes %>
+  Men's wear <i class="fas fa-chevron-right" style="font-size: 0.7rem; margin: 0 0.5rem;"></i> <%# Sub-category level discovery link %>
+  <span style="color: var(--dark-color); font-weight: 500;"><%= product.category %></span> <%# current product category focus location %>
+</nav> <%# End of breadcrumb navigation %>
+
+<!-- Product Detailed View: Image Gallery + Specs + Store Info -->
+<div class="section-white" style="display: grid; grid-template-columns: 1fr 1fr 300px; gap: 2rem; padding: 2rem;"> <%# Three-column layout for comprehensive product data as seen in the mockup area %>
+
+  <!-- Left Column: Primary Product Image Gallery -->
+  <div class="product-gallery"> <%# Container for high-fidelity product images and multi-view thumbnails %>
+    <div style="border: 1px solid var(--gray-400); border-radius: var(--border-radius); padding: 2rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center;"> <%# Focused active image viewer with border %>
+      <img src="<%= product.image && product.image.startsWith('http') ? product.image : '/img.jpg' %>" alt="<%= product.name %>" style="max-height: 400px; width: auto; object-fit: contain;"> <%# Main product image display with fallback logic control %>
+    </div> <%# End of main image viewer %>
+    <div style="display: flex; gap: 0.5rem; justify-content: center;"> <%# Grid of alt-view thumbnails for multi-perspective product inspection as shown in mockup %>
+      <div style="width: 60px; height: 60px; border: 1px solid var(--gray-400); padding: 5px; border-radius: 4px; opacity: 1;"><img src="/img.jpg" style="width: 100%; height: 100%; object-fit: contain;"></div> <%# active view thumbnail representation %>
+      <div style="width: 60px; height: 60px; border: 1px solid var(--gray-400); padding: 5px; border-radius: 4px; opacity: 0.6;"><img src="/img.jpg" style="width: 100%; height: 100%; object-fit: contain;"></div> <%# second view thumbnail representation %>
+      <div style="width: 60px; height: 60px; border: 1px solid var(--gray-400); padding: 5px; border-radius: 4px; opacity: 0.6;"><img src="/img.jpg" style="width: 100%; height: 100%; object-fit: contain;"></div> <%# third view thumbnail representation %>
+    </div> <%# End of thumbnail interaction area cluster %>
+  </div> <!--/ .product-gallery -->
+
+  <!-- Middle Column: Product Metadata, Pricing, and Primary Actions -->
+  <div class="product-summary"> <%# Main information area for product title, rating, and financial cost details %>
+    <div style="color: var(--success-color); font-size: 0.9rem; margin-bottom: 0.5rem;"><i class="fas fa-check"></i> In stock</div> <%# visibility indicator for inventory availability status label %>
+    <h1 style="font-size: 1.8rem; margin-bottom: 1rem;"><%= product.name %></h1> <%# primary heading for the specific product name label %>
+    
+    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;"> <%# cluster for rating stars and review count display metadata %>
+      <div style="color: var(--warning-color);"> <%# visual star representation for current average user rating %>
+        <% for(let i = 1; i <= 5; i++) { %> <%# loop to generate up to five star icons %>
+          <i class="<%= i <= Math.round(product.rating) ? 'fas' : 'far' %> fa-star"></i> <%# toggle icon style based on rating value logic %>
+        <% } %> <%# End of star loop logic block %>
+      </div> <%# End of stars container area %>
+      <span style="color: var(--gray-600); font-size: 0.9rem;"><%= product.rating %> reviews</span> <%# total review count label from mockup content metadata %>
+      <span style="color: var(--gray-500);">|</span> <%# visual separator for multi-element meta row %>
+      <span style="color: var(--gray-600); font-size: 0.9rem;"><i class="fas fa-shopping-basket"></i> 154 sold</span> <%# sales volume meta data indicator label from mockup area %>
+    </div> <!--/ .rating-meta-row -->
+
+    <div style="background: #fffafa; padding: 1.5rem; border-radius: 6px; margin-bottom: 1.5rem;"> <%# Highlight box for primary pricing and discount data representation %>
+      <div style="display: flex; align-items: baseline; gap: 1rem;"> <%# primary price display with comparative cost context logic %>
+        <span style="font-size: 2rem; font-weight: 700; color: var(--accent-color);">$<%= product.price %></span> <%# active numerical price label with accent emphasis coloring %>
+        <span style="text-decoration: line-through; color: var(--gray-600);">$<%= (product.price * 1.2).toFixed(2) %></span> <%# example comparison price showing a 20% savings context label %>
+      </div> <%# End of primary pricing row area %>
+    </div> <!--/ .price-highlight-box -->
+
+    <div style="color: var(--gray-800); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;"> <%# short summary paragraph for quick detail consumption by the user %>
+      <%= product.description %> <%# inject the main product textual description from the data object focus %>
+    </div> <%# End of data description summary region %>
+
+    <div style="display: flex; gap: 1rem;"> <%# Group for primary call-to-action buttons for cart interaction execution %>
+      <button class="btn btn-primary" style="flex-grow: 1; padding: 1rem;">Buy now</button> <%# Direct trigger to initiate checkout for this specific item logic %>
+      <button class="btn btn-secondary" style="flex-grow: 1; padding: 1rem; border-color: var(--primary-color);">Add to cart</button> <%# Secondary action to append item to current session cart state %>
+      <button class="btn btn-secondary" style="padding: 1rem; width: 50px;"><i class="far fa-heart"></i></button> <%# Action to save item for later in the user wishlist tracking %>
+    </div> <!--/ .action-buttons-group -->
+
+  </div> <!--/ .product-summary-column -->
+
+  <!-- Right Column: Store Attribution & Service Guarantees -->
+  <aside class="store-info-sidebar"> <%# Sidebar for seller-specific metadata and logistical trust badges shown in mockup %>
+    <div style="border: 1px solid var(--gray-400); border-radius: var(--border-radius); padding: 1.5rem;"> <%# Container for the seller identity and location block %>
+      <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid var(--gray-400); padding-bottom: 1rem;"> <%# Header for seller attribution with avatar thumbnail representation %>
+        <div style="background: #e3f0ff; width: 48px; height: 48px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 800; color: #adcbe7;">R</div> <%# Seller thumbnail placeholder representing brand initials %>
+        <div><span style="font-weight: 600;">Supplier</span><br><small style="color: var(--gray-600);">Guanjhou, China</small></div> <%# Seller name and geographical location label metadata %>
+      </div> <%# End of seller identity area block %>
+      <div style="display: flex; flex-direction: column; gap: 1rem;"> <%# vertical list of store interaction buttons as shown in mockup %>
+        <button class="btn btn-secondary" style="width: 100%; font-size: 0.9rem;">Send inquiry</button> <%# Action to contact seller directly for bulk quotes logic %>
+        <button class="btn btn-secondary" style="width: 100%; font-size: 0.9rem; border-color: var(--gray-400);">Seller's profile</button> <%# Action to view entire seller catalog and rating profile history %>
+      </div> <%# End of store action buttons cluster %>
+    </div> <!--/ .sidebar-identity-box -->
+  </aside> <!--/ .sidebar-column -->
+
+</div> <!--/ .product-detail-layout-container -->
+
+/*
+SUMMARY:
+- This file implements a complex, high-fidelity product detail page matching the professional prototype mockup.
+- It features a multi-column layout with image galleries, price highlights, and detailed seller attribution sidebars.
+- It provides a robust interface that supports user decision-making through ratings, social proof, and clear trust indicators.
+*/

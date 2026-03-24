@@ -1,0 +1,29 @@
+<%- layout('layouts/main') %> <%# use the main EJS layout for the 404 resource not found page %>
+
+<div style="text-align: center; padding: 7rem 0;"> <%# vertically centered container for the 404 page content section %>
+  <div style="font-size: 8rem; font-weight: 800; color: #eee; line-height: 1; margin-bottom: 1rem;">404</div> <%# large decorative text displaying the HTTP 404 error code status %>
+  
+  <h1 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary-color);">Page Not Found</h1> <%# primary heading for the missing resource page %>
+  <p style="font-size: 1.2rem; color: #666; margin-bottom: 3rem;"> <%# descriptive text container explaining the missing page situation %>
+    Sorry, the page you are looking for at <br> <%# inform the user that their requested page is unavailable %>
+    <strong style="color: var(--accent-color);"><%= url %></strong> <br> <%# display the exact nonexistent URL the user attempted to visit %>
+    does not exist or has been moved to a new location. <%# provide additional possible reasons for the failure %>
+  </p> <%# end of the descriptive text container section %>
+
+  <div style="margin-top: 2rem;"> <%# primary navigation section to redirect users toward available content %>
+    <a href="/" class="btn btn-primary" style="padding: 12px 30px;">Back to Homepage</a> <%# main button leading users to the store's entry point %>
+  </div> <%# end of the primary navigation section %>
+
+  <div style="margin-top: 4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; max-width: 600px; margin-left: auto; margin-right: auto;"> <%# responsive grid container for quick recovery links to main store areas %>
+    <a href="/products" style="padding: 1rem; border: 1px solid #eee; border-radius: 8px;">Browse Products</a> <%# quick link to the main product catalog area %>
+    <a href="/login" style="padding: 1rem; border: 1px solid #eee; border-radius: 8px;">User Login</a> <%# quick link to the user account login area %>
+    <a href="/signup" style="padding: 1rem; border: 1px solid #eee; border-radius: 8px;">Create Account</a> <%# quick link to the user registration signup area %>
+  </div> <%# end of the quick recovery links grid section %>
+</div> <%# end of the centered 404 message container section %>
+
+/*
+SUMMARY:
+- This page handles situations where a user attempts to access a URL that doesn't correspond to any route.
+- It provides a polite and helpful explanation of why the page is missing along with the original requested URL.
+- It includes multiple links to other important parts of the store to keep the user from getting frustrated.
+*/

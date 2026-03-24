@@ -1,0 +1,102 @@
+<%- contentFor('body') %> <%# Start of the specific content for the product listing layout %>
+
+<!-- Breadcrumbs: Path discovery for easy user navigation -->
+<nav class="breadcrumbs" style="margin-bottom: 1.5rem; color: var(--gray-600); font-size: 0.9rem;"> <%# Display the user's current location within the site hierarchy %>
+  Home <i class="fas fa-chevron-right" style="font-size: 0.7rem; margin: 0 0.5rem;"></i> <%# entry point level %>
+  Clothings <i class="fas fa-chevron-right" style="font-size: 0.7rem; margin: 0 0.5rem;"></i> <%# example parent category from mockup %>
+  Men's wear <i class="fas fa-chevron-right" style="font-size: 0.7rem; margin: 0 0.5rem;"></i> <%# example sub-category level %>
+  <span style="color: var(--dark-color); font-weight: 500;">Summer clothing</span> <%# final current page location %>
+</nav> <%# End of breadcrumb navigation %>
+
+<!-- Main Product Grid: Sidebar Filters + Results Area -->
+<div class="main-grid"> <%# Primary two-column layout for the shop discovery experience %>
+
+  <!-- Sidebar: Multi-level professional filtering system -->
+  <aside class="sidebar"> <%# Container for the structured filter options shown in the prototype mockup %>
+    
+    <div class="card-sidebar"> <%# Individual filter category block %>
+      <h4 style="display: flex; justify-content: space-between; align-items: center;">Category <i class="fas fa-chevron-up"></i></h4> <%# Collapsible filter header label %>
+      <ul class="filter-list"> <%# List of available sub-categories for refining results %>
+        <li>Mobile accessory</li> <%# example filter option %>
+        <li>Electronics</li> <%# example filter option %>
+        <li>Smartphones</li> <%# example filter option %>
+        <li>Modern tech</li> <%# example filter option %>
+        <li style="color: var(--primary-color);">See all</li> <%# link to expanded filter options %>
+      </ul> <%# End of category filter list %>
+    </div> <%# End of individual category card %>
+
+    <div class="card-sidebar"> <%# Filter block for brand-specific refinements %>
+      <h4 style="display: flex; justify-content: space-between; align-items: center;">Brands <i class="fas fa-chevron-up"></i></h4> <%# Collapsible brand header label %>
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem;"> <%# Checkbox-driven brand selection group %>
+        <label style="display: flex; align-items: center; gap: 0.8rem; font-size: 0.95rem;"><input type="checkbox" checked> Samsung</label> <%# example brand filter option %>
+        <label style="display: flex; align-items: center; gap: 0.8rem; font-size: 0.95rem;"><input type="checkbox" checked> Apple</label> <%# example brand filter option %>
+        <label style="display: flex; align-items: center; gap: 0.8rem; font-size: 0.95rem;"><input type="checkbox"> Huawei</label> <%# example brand filter option %>
+        <label style="display: flex; align-items: center; gap: 0.8rem; font-size: 0.95rem;"><input type="checkbox" checked> Pocco</label> <%# example brand filter option %>
+        <label style="display: flex; align-items: center; gap: 0.8rem; font-size: 0.95rem;"><input type="checkbox"> Lenovo</label> <%# example brand filter option %>
+        <a href="#" style="color: var(--primary-color); font-size: 0.9rem; margin-top: 0.5rem;">See all</a> <%# link for expanded brand list %>
+      </div> <%# End of brand selection group %>
+    </div> <%# End of brands filter card %>
+
+    <div class="card-sidebar"> <%# Block for price-range numeric inputs %>
+      <h4 style="display: flex; justify-content: space-between; align-items: center;">Price range <i class="fas fa-chevron-up"></i></h4> <%# Collapsible price range header label %>
+      <div style="margin-top: 1rem;"> <%# Container for min/max price entry fields %>
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;"> <%# horizontal alignment for numeric boundaries %>
+          <div><label style="font-size: 0.8rem; color: var(--gray-600);">Min</label><input type="number" placeholder="0" class="form-control"></div> <%# lower bound input field %>
+          <div><label style="font-size: 0.8rem; color: var(--gray-600);">Max</label><input type="number" placeholder="9999" class="form-control"></div> <%# upper bound input field %>
+        </div> <%# End of min/max inputs stack %>
+        <button class="btn btn-secondary" style="width: 100%; border-color: var(--gray-400);">Apply</button> <%# brand action for executing price numeric filter %>
+      </div> <%# End of price fields area %>
+    </div> <%# End of price filter card %>
+
+  </aside> <%# End of the complex filter sidebar section %>
+
+  <!-- Results: Sort, Filter Badges, and Product Cards -->
+  <main class="results-area"> <%# Primary region for displaying filtered product items %>
+    
+    <!-- Top Bar: View toggles and count meta-data -->
+    <div class="section-white" style="padding: 0.8rem 1.5rem; display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;"> <%# header for the results grid area %>
+      <div><%= totalProducts %> items in <span style="font-weight: 700;">Mobile accessory</span></div> <%# display current result count and focus scope label %>
+      <div style="display: flex; align-items: center; gap: 1.5rem;"> <%# group for listing controls and view options %>
+        <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem;"><input type="checkbox"> Verified only</label> <%# checkbox for premium/verified filter logic %>
+        <select class="form-control" style="width: 120px; padding: 0.3rem;"> <%# sorting preference dropdown selector %>
+          <option>Featured</option> <%# Sort order by recommendation %>
+          <option>Price: Low to High</option> <%# Sort order by numerical cost %>
+          <option>Newest</option> <%# Sort order by creation timestamp %>
+        </select> <%# End of sorting dropdown %>
+        <div style="display: flex; border: 1px solid var(--gray-500); border-radius: 4px; overflow: hidden;"> <%# toggle container for visual view modes %>
+          <div style="padding: 0.4rem 0.8rem; background: var(--gray-300); border-right: 1px solid var(--gray-500); cursor: pointer;"><i class="fas fa-th"></i></div> <%# grid view icon representation %>
+          <div style="padding: 0.4rem 0.8rem; cursor: pointer; color: var(--gray-600);"><i class="fas fa-list"></i></div> <%# list view icon representation %>
+        </div> <%# End of view mode toggles cluster %>
+      </div> <%# End of listing controls cluster %>
+    </div> <%# End of results top bar area %>
+
+    <!-- Active Filter Badges: Quick removal of criteria -->
+    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; align-items: center;"> <%# show chips for each currently applied filter %>
+      <div style="border: 1px solid var(--primary-color); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.9rem;">Samsung <i class="fas fa-times" style="margin-left: 0.5rem; cursor: pointer;"></i></div> <%# example filter removal chip %>
+      <div style="border: 1px solid var(--primary-color); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.9rem;">Apple <i class="fas fa-times" style="margin-left: 0.5rem; cursor: pointer;"></i></div> <%# example filter removal chip %>
+      <div style="border: 1px solid var(--primary-color); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.9rem;">Poco <i class="fas fa-times" style="margin-left: 0.5rem; cursor: pointer;"></i></div> <%# example filter removal chip %>
+      <span style="color: var(--primary-color); cursor: pointer; margin-left: 0.5rem;">Clear all filter</span> <%# global action to reset all search state criteria %>
+    </div> <%# End of active filters area %>
+
+    <!-- Product Grid: paginated item cards -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; margin-bottom: 2rem;"> <%# primary layout for filtered items based on current page state %>
+      <% products.forEach(product => { %> <%# Loop through the currently paginated subset of search results %>
+        <%- include('../partials/product-card', { product }) %> <%# Inject the high-fidelity card component for each item loop %>
+      <% }); %> <%# End of results products loop %>
+    </div> <%# End of item results grid container %>
+
+    <!-- Pagination: results navigation system -->
+    <div style="display: flex; justify-content: flex-end;"> <%# align the navigation cluster to the right as shown in mockup prototypes %>
+      <%- include('../partials/pagination', { currentPage, totalPages, baseUrl: '/products' }) %> <%# include redesigned navigation links with current context %>
+    </div> <%# End of pagination area block %>
+
+  </main> <%# End of the main results main area section %>
+
+</div> <!--/ .main-grid -->
+
+/*
+SUMMARY:
+- This file implements a sophisticated product listing page with advanced sidebar filters and item grids.
+- It includes layout features like breadcrumbs, view mode toggles, and active filter management chips.
+- It mirrors the professional complexity of modern ecommerce interfaces as defined by the provided prototypes.
+*/

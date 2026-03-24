@@ -1,0 +1,37 @@
+<% if (totalPages > 1) { %> <%# only show navigation links if more than one result page exists in the current scope %>
+  <div class="pagination" style="display: flex; background: var(--white); border: 1px solid var(--gray-400); border-radius: 4px; overflow: hidden;"> <%# organized navigation container cluster %>
+    
+    <%# PREVIOUS Button Navigation with icon representation %>
+    <a href="<%= baseUrl %>?page=<%= currentPage - 1 %>" 
+       class="pagination-btn <%= currentPage === 1 ? 'disabled' : '' %>" <%# mark as disabled if on the first page viewport %>
+       style="padding: 0.6rem 1rem; border-right: 1px solid var(--gray-400); color: <%= currentPage === 1 ? 'var(--gray-500)' : 'var(--dark-color)' %>; cursor: <%= currentPage === 1 ? 'not-allowed' : 'pointer' %>;">
+      <i class="fas fa-chevron-left"></i> <%# FontAwesome icon for previous navigation arrow pointer %>
+    </a> <%# End of previous link navigate %>
+
+    <%# Page Number Indicators Loop for direct access navigation %>
+    <% for (let i = 1; i <= totalPages; i++) { %> <%# generate individual page link for every available result subset %>
+      <a href="<%= baseUrl %>?page=<%= i %>" 
+         class="pagination-num <%= currentPage === i ? 'active' : '' %>" <%# highlight the active page indicator for current user position context awareness %>
+         style="padding: 0.6rem 1.2rem; border-right: 1px solid var(--gray-400); font-weight: 500; 
+                background: <%= currentPage === i ? 'var(--gray-300)' : 'var(--white)' %>; 
+                color: <%= currentPage === i ? 'var(--dark-color)' : 'var(--gray-600)' %>;">
+        <%= i %> <%# numerical sequence label for the current page link representation %>
+      </a> <%# End of individual page index link block %>
+    <% } %> <%# End of page numbers generation loop %>
+
+    <%# NEXT Button Navigation with icon representation %>
+    <a href="<%= baseUrl %>?page=<%= currentPage + 1 %>" 
+       class="pagination-btn <%= currentPage === totalPages ? 'disabled' : '' %>" <%# mark as disabled if on the final result page viewport %>
+       style="padding: 0.6rem 1rem; color: <%= currentPage === totalPages ? 'var(--gray-500)' : 'var(--primary-color)' %>; cursor: <%= currentPage === totalPages ? 'not-allowed' : 'pointer' %>;">
+      <i class="fas fa-chevron-right"></i> <%# FontAwesome icon for next navigation arrow pointer %>
+    </a> <%# End of next link navigate %>
+
+  </div> <%# End of pagination component container region %>
+<% } %> <%# End of total pages conditional logic check %>
+
+/*
+SUMMARY:
+- This file implements a premium, organized pagination component as seen in professional web designs.
+- It includes active page highlighting, directional icon controls, and a clean, responsive layout structure.
+- It ensures users can intuitively navigate through large product catalogs with clear visual feedback.
+*/

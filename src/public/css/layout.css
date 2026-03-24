@@ -1,0 +1,93 @@
+.container { /* Define a maximum width container for centered content sections */
+  max-width: 1200px; /* Set the standard desktop width as seen in the prototype */
+  margin: 0 auto; /* Center the container horizontally on the screen */
+  padding: 0 1rem; /* Add horizontal padding for mobile viewports */
+} /* End of container styling */
+/* This is a blank line for readability */
+.header { /* Main container for the site header which contains search and brand navigation */
+  background-color: var(--white); /* Use a clean white background for the main header area */
+  padding: 1.5rem 0; /* Set vertical padding for a spacious feel */
+  border-bottom: 1px solid var(--gray-400); /* Add a subtle separator at the bottom of the header */
+} /* End of header styling */
+/* This is a blank line for readability */
+.navbar-top { /* Top section of the navigation containing branding, search, and action icons */
+  display: flex; /* Use flexbox for horizontal alignment of items */
+  justify-content: space-between; /* Push the logo and action groups to opposite sides */
+  align-items: center; /* Vertically center all header components */
+} /* End of navbar-top styling */
+/* This is a blank line for readability */
+.nav-search { /* Container for the primary search input area seen in the prototype */
+  flex: 1; /* Allow the search bar to grow and fill available space in the middle */
+  max-width: 600px; /* Limit the search width to prevent excessive stretching on wide screens */
+  margin: 0 2rem; /* Add horizontal spacing between search and flanking components */
+  display: flex; /* Align the input and category selector horizontally within the search box */
+  border: 2px solid var(--primary-color); /* Apply the brand blue border to highlight the search feature */
+  border-radius: var(--border-radius); /* Round the corners of the composite search bar */
+  overflow: hidden; /* Ensure children (input/button) don't overflow the rounded corners */
+} /* End of nav-search styling */
+/* This is a blank line for readability */
+.nav-search input { /* Primary text input for product searching */
+  width: 100%; /* Fill the available space within the search container */
+  padding: 0.6rem 1rem; /* Set comfortable internal padding for user input */
+  border: none; /* Remove default input borders to match the custom container styling */
+  outline: none; /* Disable default focus outlines for a cleaner aesthetic */
+} /* End of search input styling */
+/* This is a blank line for readability */
+.nav-actions { /* Container for user-related icon links appearing in the top-right header */
+  display: flex; /* Arrange icons in a horizontal row */
+  gap: 1.5rem; /* Add consistent spacing between each user action icon */
+} /* End of nav-actions styling */
+/* This is a blank line for readability */
+.nav-action-item { /* Individual container for a user action icon and its label */
+  display: flex; /* Stack the icon and label vertically */
+  flex-direction: column; /* Align children in a column */
+  align-items: center; /* Center the label text below the icon */
+  font-size: 0.75rem; /* Use a smaller font size for the icon labels as per prototype design */
+  color: var(--gray-600); /* Use the secondary gray color for a subtle presence */
+} /* End of individual action item styling */
+/* This is a blank line for readability */
+.navbar-bottom { /* Secondary navigation strip below the main header for category links */
+  background-color: var(--white); /* Match the top header's background for continuity */
+  padding: 0.8rem 0; /* Set thinner vertical padding for the category link strip */
+  border-bottom: 1px solid var(--gray-400); /* Add a bottom border to separate from main page content */
+} /* End of navbar-bottom styling */
+/* This is a blank line for readability */
+.nav-menu { /* Container for the horizontal list of category navigation links */
+  display: flex; /* Arrange category links in a row */
+  gap: 2rem; /* Set consistent gap between category navigation links */
+  font-weight: 500; /* Use medium weight for clear at-a-glance navigation */
+} /* End of nav-menu styling */
+/* This is a blank line for readability */
+.main-grid { /* Standard grid layout used for product lists and multi-column pages */
+  display: grid; /* Enable CSS Grid for high-fidelity layout control */
+  grid-template-columns: 240px 1fr; /* Set a fixed sidebar width and fluid main content area column */
+  gap: 2rem; /* Add consistent gutter between the sidebar and the main area results */
+  margin: 2rem 0; /* Set vertical spacing for overall page balance */
+} /* End of main-grid styling */
+/* This is a blank line for readability */
+.section-white { /* A base styled container for content blocks with a white background card feel */
+  background: var(--white); /* Set background color to pure white for card clarity */
+  padding: 1.5rem; /* Set consistent internal padding for all content sections */
+  border-radius: var(--border-radius); /* Apply standard rounding as seen in the prototype design */
+  border: 1px solid var(--gray-400); /* Add a subtle border to clearly define section boundaries */
+} /* End of white section styling */
+/* This is a blank line for readability */
+.footer { /* Site footer layout spanning multiple columns as shown in the web prototype */
+  background-color: var(--white); /* Use a white background consistent with the professional brand feels */
+  padding: 3rem 0; /* Provide generous vertical padding for the bottom of the site */
+  margin-top: 5rem; /* Set significant top margin to separate footer from main page content */
+  border-top: 1px solid var(--gray-400); /* Add a top border as a clear ending point for pages */
+} /* End of footer styling */
+/* This is a blank line for readability */
+.footer-grid { /* Grid layout for the multi-column information links in the footer */
+  display: grid; /* Enable CSS grid for footer column organization */
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr; /* Create space for a main brand column and four link columns */
+  gap: 3rem; /* Set large gutters between footer columns for readability */
+} /* End of footer grid styling */
+/* This is a blank line for readability */
+/*
+SUMMARY:
+- This file handles the layout structure of the entire application based on the prototype images.
+- It includes a complex multi-part header, a sidebar-driven main grid, and a multi-column footer.
+- It focuses on using Flexbox and CSS Grid to achieve the professional, organized aesthetic required.
+*/

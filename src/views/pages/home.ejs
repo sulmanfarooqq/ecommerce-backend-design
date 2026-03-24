@@ -1,0 +1,122 @@
+<%- contentFor('body') %> <%# Start of the specific content for the home page layout %>
+
+<!-- Hero Section: Categories Sidebar & Major Banner -->
+<section class="section-white" style="padding: 1rem; border-radius: var(--border-radius); display: grid; grid-template-columns: 240px 1fr 240px; gap: 1.5rem; margin-bottom: 2rem;"> <%# Three-column layout for category access, main promotion, and user login quick-actions %>
+  
+  <!-- Left: Categories Sidebar -->
+  <aside class="hero-sidebar"> <%# Container for high-level shop categorization as seen in the mockup %>
+    <ul class="filter-list"> <%# Vertical list for category navigation links %>
+      <li class="active" style="background: var(--gray-300); border-radius: 6px; padding: 0.6rem 1rem;">Automobiles</li> <%# example category from mockup %>
+      <li>Clothes and wear</li> <%# example category link %>
+      <li>Home interiors</li> <%# example category link %>
+      <li>Computer and tech</li> <%# example category link %>
+      <li>Tools, equipments</li> <%# example category link %>
+      <li>Sports and outdoor</li> <%# example category link %>
+      <li>Animal and pets</li> <%# example category link %>
+      <li>Machinery tools</li> <%# example category link %>
+      <li>More category</li> <%# link to expanded category view %>
+    </ul> <%# End of category list %>
+  </aside> <%# End of sidebar section %>
+
+  <!-- Middle: Main Brand Promotion -->
+  <div class="hero-banner" style="background: #e3f0ff url('/img.jpg') no-repeat right; border-radius: 6px; padding: 3rem 2rem; position: relative; overflow: hidden;"> <%# Centered primary brand banner with promotional background %>
+    <h1 style="font-size: 2.2rem; color: #1c1c1c; margin-bottom: 1rem;">Latest trending<br><span style="font-weight: 800;">Electronic items</span></h1> <%# Primary promotional heading as seen in mockup %>
+    <button class="btn btn-secondary" style="border: none; padding: 0.8rem 2rem;">Learn more</button> <%# Primary call-to-action button for the banner %>
+  </div> <%# End of main banner container %>
+
+  <!-- Right: User Quick Actions -->
+  <div class="hero-user-card" style="display: flex; flex-direction: column; gap: 0.8rem;"> <%# Column for authenticated and unauthenticated user quick-states %>
+    <div style="background: #e3f0ff; padding: 1rem; border-radius: 6px;"> <%# Box for greeting and auth options %>
+      <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;"> <%# User avatar and greeting line %>
+        <i class="fas fa-user-circle" style="font-size: 2.5rem; color: var(--gray-500);"></i> <%# placeholder icon for user thumbnail %>
+        <span>Hi, user let's get started</span> <%# Generic welcome text from prototype mockup %>
+      </div> <%# End of greeting area %>
+      <a href="/signup" class="btn btn-primary" style="width: 100%; margin-bottom: 0.5rem; font-size: 0.9rem;">Join now</a> <%# Primary action link for new users %>
+      <a href="/login" class="btn btn-secondary" style="width: 100%; font-size: 0.9rem;">Log in</a> <%# Secondary action link for existing users %>
+    </div> <%# End of auth box %>
+    <div style="background: #f38332; color: white; padding: 1.5rem 1rem; border-radius: 6px;"> <%# eye-catchy promo banner for supplier quote feature %>
+      Get US $10 off with a new supplier
+    </div> <%# End of promo box %>
+    <div style="background: #55bdc3; color: white; padding: 1.5rem 1rem; border-radius: 6px;"> <%# second promo box from sidebar mockup %>
+      Send quotes with supplier preferences
+    </div> <%# End of second promo box %>
+  </div> <%# End of right-column user group %>
+
+</section> <!--/ .hero-section -->
+
+<!-- Deals and Offers Section -->
+<section class="section-white" style="display: flex; padding: 0; overflow: hidden; margin-bottom: 2rem;"> <%# Integrated deal timer and horizontal product scroll as seen in the mockup %>
+  <div style="padding: 1.5rem; width: 280px; border-right: 1px solid var(--gray-400);"> <%# Static information panel with timer display %>
+    <h3>Deals and offers</h3> <%# Section header label %>
+    <p style="color: var(--gray-600); margin-bottom: 1.5rem;">Hygiene equipments</p> <%# example promo category subtext %>
+    <div class="countdown" style="display: flex; gap: 0.5rem;"> <%# Container for numerical deal timer boxes %>
+      <div style="background: var(--dark-color); color: white; padding: 0.5rem; border-radius: 4px; text-align: center; width: 45px;">04<br><small>Days</small></div> <%# time fragment box %>
+      <div style="background: var(--dark-color); color: white; padding: 0.5rem; border-radius: 4px; text-align: center; width: 45px;">13<br><small>Hour</small></div> <%# time fragment box %>
+      <div style="background: var(--dark-color); color: white; padding: 0.5rem; border-radius: 4px; text-align: center; width: 45px;">34<br><small>Min</small></div> <%# time fragment box %>
+      <div style="background: var(--dark-color); color: white; padding: 0.5rem; border-radius: 4px; text-align: center; width: 45px;">56<br><small>Sec</small></div> <%# time fragment box %>
+    </div> <%# End of deal timer display %>
+  </div> <%# End of deal info panel %>
+  <div style="display: flex; flex-grow: 1; justify-content: space-around; padding: 1.5rem;"> <%# Flex container for items included in the current deal %>
+    <% products.slice(0, 5).forEach(product => { %> <%# Loop through the first five available products %>
+      <div style="text-align: center; cursor: pointer;"> <%# Individual deal item card without full card UI %>
+        <img src="/img.jpg" alt="deal" style="width: 120px; height: 120px; object-fit: contain; margin-bottom: 0.5rem;"> <%# simple item thumbnail placeholder %>
+        <p style="font-size: 0.9rem; color: var(--dark-color);"><%= product.name %></p> <%# brief item title label %>
+        <span style="background: #ffe3e3; color: var(--accent-color); padding: 0.2rem 0.5rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">-25%</span> <%# example discount percentage tag from mockup %>
+      </div> <%# End of individual deal item %>
+    <% }); %> <%# End of deal items loop %>
+  </div> <%# End of scrollable deal items container %>
+</section> <!--/ .deals-section -->
+
+<!-- Recommended Items Grid -->
+<section style="margin-bottom: 3rem;"> <%# Secondary section for general product discovery based on user interests %>
+  <h2 style="margin-bottom: 1.5rem;">Recommended items</h2> <%# Section header label matching the mockup header font feel %>
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.5rem;"> <%# Fluid grid for product cards that adjusts based on device screen screen viewport width %>
+    <% products.forEach(product => { %> <%# Loop through every product available in the provided array %>
+      <%- include('../partials/product-card', { product }) %> <%# Inject the newly redesigned product-card partial component %>
+    <% }); %> <%# End of recommended products loop %>
+  </div> <%# End of responsive grid container %>
+</section> <!--/ .recommended-section -->
+
+<!-- Suppliers by region Section -->
+<section style="margin-bottom: 3rem;"> <%# Geographical categorization group as shown in the mockup footer area %>
+  <h2 style="margin-bottom: 1.5rem;">Suppliers by region</h2> <%# Section header label for the map group representation %>
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem;"> <%# Grid for country links and their icons %>
+    <div style="display: flex; align-items: center; gap: 0.8rem;"> <%# Individual country entry with a flag flag and shop count label %>
+      <img src="https://flagcdn.com/w20/ae.png" alt="AE" style="width: 25px;"> <%# flag image icon representation %>
+      <div>Arabic Emirates<br><small style="color: var(--gray-600);">shopname.ae</small></div> <%# country name and example subdomain value link text %>
+    </div> <%# End of individual region item %>
+    <div style="display: flex; align-items: center; gap: 0.8rem;">
+      <img src="https://flagcdn.com/w20/au.png" alt="AU" style="width: 25px;">
+      <div>Australia<br><small style="color: var(--gray-600);">shopname.ae</small></div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.8rem;">
+      <img src="https://flagcdn.com/w20/us.png" alt="US" style="width: 25px;">
+      <div>United States<br><small style="color: var(--gray-600);">shopname.ae</small></div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.8rem;">
+      <img src="https://flagcdn.com/w20/ru.png" alt="RU" style="width: 25px;">
+      <div>Russia<br><small style="color: var(--gray-600);">shopname.ru</small></div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.8rem;">
+      <img src="https://flagcdn.com/w20/it.png" alt="IT" style="width: 25px;">
+      <div>Italy<br><small style="color: var(--gray-600);">shopname.it</small></div>
+    </div>
+  </div> <%# End of region grid layout area %>
+</section> <!--/ .region-section -->
+
+<!-- Newsletter Signup Section -->
+<section style="background: var(--gray-400); padding: 3rem; text-align: center; border-radius: var(--border-radius); border: 1px solid var(--gray-500);"> <%# Prominent centered engagement section as shown in the footer area mockup %>
+  <h2 style="margin-bottom: 0.5rem;">Subscribe on our newsletter</h2> <%# newsletter invitation text heading %>
+  <p style="color: var(--gray-800); margin-bottom: 1.5rem;">Get daily news on upcoming offers from many suppliers all over the world</p> <%# value proposition text for email sign up %>
+  <form style="display: flex; justify-content: center; gap: 0.5rem;"> <%# Centered horizontal form for user email entry and subscription trigger %>
+    <input type="email" placeholder="Email" class="form-control" style="max-width: 300px;"> <%# Dedicated email type input control %>
+    <button class="btn btn-primary">Subscribe</button> <%# Brand blue subscription button to execute email entry logic %>
+  </form> <%# End of signup form container %>
+</section> <!--/ .newsletter-section -->
+
+/*
+SUMMARY:
+- This file implements a multi-section, complex home page mirroring the professional prototype design.
+- It features a three-column hero section, integrated deal timers, recommended product grids, and regional categorization.
+- It focuses on using the design tokens and layout grids to create a premium, production-quality entry experience for users.
+*/

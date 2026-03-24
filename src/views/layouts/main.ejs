@@ -1,0 +1,46 @@
+<!DOCTYPE html> <%# Start of the HTML5 document %>
+<html lang="en"> <%# Set the language of the document to English %>
+<head> <%# Start of the head section for metadata and styles %>
+  <meta charset="UTF-8"> <%# Set the character encoding to UTF-8 %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <%# Ensure the page is responsive on mobile devices %>
+  <title><%= typeof title !== 'undefined' ? `${title} | ShopEase` : 'ShopEase | Premium Ecommerce' %></title> <%# Set the page title dynamically with brand suffix %>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <%# Preconnect for faster Google font loading %>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <%# Preconnect for cross-origin font assets %>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> <%# Import Inter font family weights %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <%# Import FontAwesome icons for professional UI %>
+  
+  <%# Link to all the CSS files for styling the application %>
+  <link rel="stylesheet" href="/css/base.css"> <%# Include the design tokens and reset styles %>
+  <link rel="stylesheet" href="/css/layout.css"> <%# Include the structural layout grid styles %>
+  <link rel="stylesheet" href="/css/components.css"> <%# Include the reusable UI component styles %>
+  <link rel="stylesheet" href="/css/responsive.css"> <%# Include the responsive mobile-first media queries %>
+  
+  <%- typeof extraCSS !== 'undefined' ? extraCSS : '' %> <%# Inject extra CSS if provided by the specific page controller %>
+</head> <%# End of the head section %>
+<body> <%# Start of the body section for visible content %>
+
+  <%- include('../partials/navbar') %> <%# Include the reusable navigation bar partial %>
+
+  <main class="container" style="min-height: 80vh; padding-top: 2rem;"> <%# Start of the main content area with a minimum height %>
+    <%- body %> <%# Inject the specific page content into the layout %>
+  </main> <%# End of the main content area %>
+
+  <%- include('../partials/footer') %> <%# Include the reusable footer partial %>
+
+  <%# Include the main JavaScript file for overall interactivity %>
+  <script src="/js/main.js"></script> <%# Load the main JS file at the end for better performance %>
+  
+  <%# Option to include page-specific JS files if needed %>
+  <%- typeof extraJS !== 'undefined' ? extraJS : '' %> <%# Inject extra JS if provided by the controller %>
+
+</body> <%# End of the body section %>
+</html> <%# End of the HTML document %>
+
+/*
+SUMMARY:
+- This file serves as the master layout for every page in the application.
+- It includes all the necessary meta tags, stylesheets, and scripts to ensure consistency.
+- It uses EJS partials for the navbar and footer and injects page-specific content into the `<main>` tag.
+*/

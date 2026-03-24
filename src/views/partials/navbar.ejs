@@ -1,0 +1,81 @@
+<header class="header"> <%# Start of the main high-fidelity site header region %>
+  <div class="container"> <%# Use the standard layout container for horizontal centering %>
+    
+    <!-- Top Navigation: Brand, Search, User Actions -->
+    <div class="navbar-top"> <%# Upper section of the header containing the primary interactive elements %>
+      
+      <!-- Logo / Brand -->
+      <a href="/" class="brand"> <%# Home link wrapping the primary brand identity %>
+        <img src="/img.jpg" alt="Brand Logo" style="height: 40px; width: auto;"> <%# Display the main brand logo as seen in the prototype %>
+      </a> <%# End of brand link %>
+
+      <!-- Central Search System -->
+      <div class="nav-search"> <%# Feature-rich search container with integrated category selection %>
+        <input type="text" placeholder="Search for products..."> <%# Primary text input for user queries %>
+        <select class="form-control" style="width: 150px; border: none; border-left: 1px solid var(--gray-400); border-radius: 0;"> <%# Inline category filter dropdown %>
+          <option>All category</option> <%# Default search scope %>
+          <option>Electronics</option> <%# Example search sub-category %>
+          <option>Home & Garden</option> <%# Example search sub-category %>
+        </select> <%# End of category selection %>
+        <button class="btn btn-primary" style="padding: 0 1.5rem; border-radius: 0;">Search</button> <%# Integrated brand-blue search execution button %>
+      </div> <%# End of nav-search container %>
+
+      <!-- User Action Groups -->
+      <div class="nav-actions"> <%# Right-hand cluster for user-specific account and status actions %>
+        <a href="/login" class="nav-action-item"> <%# Link to user profile or login page %>
+          <i class="fas fa-user"></i> <%# FontAwesome icon for profile representation %>
+          <span>Profile</span> <%# Descriptive label for the profile link %>
+        </a> <%# End of profile link %>
+        <a href="#" class="nav-action-item"> <%# Future link for messaging system %>
+          <i class="fas fa-comment-dots"></i> <%# FontAwesome icon for communication/messages %>
+          <span>Message</span> <%# Descriptive label for the message link %>
+        </a> <%# End of message link %>
+        <a href="#" class="nav-action-item"> <%# Future link for order tracking %>
+          <i class="fas fa-heart"></i> <%# FontAwesome icon for favorites or orders %>
+          <span>Orders</span> <%# Descriptive label for the orders link %>
+        </a> <%# End of orders link %>
+        <a href="/cart" class="nav-action-item"> <%# Direct link to the shopping cart view %>
+          <i class="fas fa-shopping-cart"></i> <%# FontAwesome icon for the cart representation %>
+          <span>My cart</span> <%# Descriptive label for the cart link %>
+        </a> <%# End of cart link %>
+      </div> <%# End of user actions cluster %>
+      
+    </div> <!--/ .navbar-top -->
+
+  </div> <!--/ .container -->
+</header> <%# End of the main white header section %>
+
+<!-- Bottom Navigation: Categories & Global Settings -->
+<nav class="navbar-bottom"> <%# Secondary thinner navigation strip for link density and global settings %>
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center;"> <%# Align category links and settings horizontally %>
+    
+    <div class="nav-menu"> <%# Horizontal list for secondary category and support links %>
+      <a href="/products" style="display: flex; align-items: center; gap: 0.5rem;"> <%# Main shop entry point %>
+        <i class="fas fa-bars"></i> All category <%# Hamburger icon for category broad access %>
+      </a> <%# End of shop link %>
+      <a href="/products?featured=true">Hot offers</a> <%# Direct link to promotions/featured content %>
+      <a href="#">Gift boxes</a> <%# Example secondary link from prototype %>
+      <a href="#">Projects</a> <%# Example secondary link from prototype %>
+      <a href="#">Menu item</a> <%# Example secondary link from prototype %>
+      <a href="#">Help</a> <%# Support section access link %>
+    </div> <%# End of category menu cluster %>
+
+    <div class="nav-settings" style="display: flex; gap: 1.5rem; font-size: 0.9rem; font-weight: 500;"> <%# Group for currency, language, and shipping location %>
+      <div class="setting-item">English, USD <i class="fas fa-chevron-down"></i></div> <%# Language and currency preference toggle %>
+      <div class="setting-item">Ship to <img src="https://flagcdn.com/w20/de.png" alt="DE" style="display: inline; vertical-align: middle; margin-left: 5px;"> <i class="fas fa-chevron-down"></i></div> <%# Shipping destination preference toggle %>
+    </div> <%# End of settings cluster %>
+
+  </div> <!--/ .container -->
+</nav> <%# End of the category/settings navigation bar %>
+
+<!-- Utility: Global Alerts Section -->
+<div class="container" style="margin-top: 1rem;"> <%# Spacing for transient system notifications %>
+  <%- include('./alerts') %> <%# Inject dynamic success or error messages from the controller %>
+</div> <%# End of alerts section container %>
+
+/*
+SUMMARY:
+- This file implements the dual-bar navigation system shown in the professional prototype.
+- The top bar handles search, branding, and user status, while the bottom bar handles categories and localization.
+- It uses FontAwesome for iconography and Flexbox for precise multi-element alignment across desktop viewports.
+*/

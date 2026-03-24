@@ -1,0 +1,40 @@
+<div class="product-card"> <%# Start of the individual product card container %>
+  
+  <a href="/products/<%= product._id %>" class="product-image-link"> <%# Wrap image in link for easy user navigation to details %>
+    <div class="product-image-container"> <%# Container for consistent thumbnail alignment and sizing %>
+      <img src="<%= product.image && product.image.startsWith('http') ? product.image : '/img.jpg' %>" alt="<%= product.name %>" class="product-image"> <%# Display product image with fallback logic %>
+    </div> <%# End of image container %>
+  </a> <%# End of image link %>
+
+  <div class="product-info"> <%# Detailed information area for product meta-data %>
+    
+    <div class="product-price"> <%# Primary price display as seen in the grid mockup %>
+      $<%= product.price.toFixed(2) %> <%# Format the price with two decimal places for professional currency display %>
+    </div> <%# End of price display %>
+
+    <div class="product-rating" style="color: var(--warning-color); font-size: 0.85rem; margin-bottom: 0.5rem;"> <%# Visual rating representation using star icons %>
+      <%# Generate star icons based on the product's numerical rating %>
+      <% for(let i = 1; i <= 5; i++) { %> <%# Loop through five possible stars %>
+        <i class="<%= i <= Math.round(product.rating) ? 'fas' : 'far' %> fa-star"></i> <%# Toggle between solid and regular star icons %>
+      <% } %> <%# End of star icons loop %>
+      <span style="color: var(--gray-600); margin-left: 0.3rem;"><%= product.rating %></span> <%# Show numerical rating for precise information %>
+    </div> <%# End of rating display %>
+
+    <a href="/products/<%= product._id %>" class="product-title"> <%# Textual product name link for detail access %>
+      <%= product.name %> <%# Display the main product name %>
+    </a> <%# End of title link %>
+
+    <% if (product.featured) { %> <%# Conditional display for featured items marking them as special %>
+      <span class="badge-featured" style="margin-top: 0.5rem; display: inline-block;">Featured</span> <%# Show the red featured badge as seen in the prototype %>
+    <% } %> <%# End of featured badge logic %>
+
+  </div> <%# End of product info area %>
+
+</div> <%# End of the high-fidelity product card component %>
+
+/*
+SUMMARY:
+- This file implements a reusable, high-fidelity product card component as shown in the web prototype.
+- It includes price prominence, star ratings, and a clear visual hierarchy for the product title.
+- It uses conditional logic for fallback images and badge displays to maintain UI consistency.
+*/
