@@ -1,63 +1,63 @@
-<%- contentFor('body') %> <%# Start of the specific content for the user registration layout %>
+<%- contentFor('body') %>
 
-<div style="max-width: 400px; margin: 4rem auto; padding: 2.5rem; background: var(--white); border: 1px solid var(--gray-400); border-radius: var(--border-radius); box-shadow: var(--shadow-sm);"> <%# Centered registration card container with premium spacing and consistent styling %>
-  
-  <h2 style="margin-bottom: 2rem; text-align: center;">Register</h2> <%# Primary page heading label for the account creation context awareness %>
-  
-  <form action="/auth/signup" method="POST"> <%# Start of the secure registration form for new user data submission %>
-    
-    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;"> <%# horizontal alignment for personal identification fields shown in mockup %>
-      <div style="flex: 1;"> <%# first name entry field group label context awareness %>
-        <label for="firstName" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">First name</label> <%# label for name input control focus %>
-        <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Type here"> <%# input for user first name identification text %>
-      </div> <%# End of first name field cluster %>
-      <div style="flex: 1;"> <%# last name entry field group label context awareness %>
-        <label for="lastName" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Last name</label> <%# label for name input control focus %>
-        <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Type here"> <%# input for user last name identification text %>
-      </div> <%# End of last name field cluster %>
-    </div> <!--/ .name-row-grid -->
+<div style="max-width: 400px; margin: 4rem auto; padding: 2.5rem; background: var(--white); border: 1px solid var(--gray-400); border-radius: var(--border-radius); box-shadow: var(--shadow-sm);">
 
-    <div style="margin-bottom: 1.5rem;"> <%# Group for user email identification data entry logic %>
-      <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Email</label> <%# label for email input control focus %>
-      <input type="email" id="email" name="email" class="form-control" placeholder="example@mail.com" required> <%# primary email input field with example placeholder text validation %>
-    </div> <%# End of email field cluster %>
+  <h2 style="margin-bottom: 2rem; text-align: center;">Register</h2>
 
-    <div style="margin-bottom: 1.5rem;"> <%# Group for phone contact data entry context awareness %>
-      <label for="phone" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Phone</label> <%# label for phone input control focus %>
-      <div style="display: flex; border: 1px solid var(--gray-400); border-radius: var(--border-radius); overflow: hidden;"> <%# composite input and code selector group for international phone entries %>
-        <select style="border: none; background: #f8f9fa; padding: 0.6rem; border-right: 1px solid var(--gray-400); outline: none;"> <%# selection for country calling codes shown in mockup %>
-          <option>UZ +998</option> <%# example country code selection from mockup area content %>
-        </select> <%# End of country code dropdown %>
-        <input type="tel" id="phone" name="phone" style="border: none; padding: 0.6rem; width: 100%; outline: none;" placeholder="00-000-00-00"> <%# input for numerical phone sequence entries with masking placeholder %>
-      </div> <%# End of phone input group area block %>
-    </div> <!--/ .phone-field-group -->
+  <form action="/auth/signup" method="POST">
 
-    <div style="margin-bottom: 1.5rem;"> <%# Group for secure user password creation context awareness %>
-      <label for="password" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Create password</label> <%# label for security credential input focus %>
-      <input type="password" id="password" name="password" class="form-control" placeholder="At least 6 characters" required> <%# masked password input field with length requirement placeholder text validation %>
-    </div> <%# End of password creation cluster %>
+    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+      <div style="flex: 1;">
+        <label for="firstName" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">First name</label>
+        <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Type here">
+      </div>
+      <div style="flex: 1;">
+        <label for="lastName" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Last name</label>
+        <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Type here">
+      </div>
+    </div>
 
-    <div style="margin-bottom: 2rem;"> <%# Group for password confirmation to ensure user entry accuracy logic awareness %>
-      <label for="confirmPassword" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Repeat password</label> <%# label for security confirm input focus %>
-      <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Type here" required> <%# secondary masked password input field for validation check logic %>
-    </div> <%# End of password confirmation cluster %>
+    <div style="margin-bottom: 1.5rem;">
+      <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Email</label>
+      <input type="email" id="email" name="email" class="form-control" placeholder="example@mail.com" required>
+    </div>
 
-    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.8rem; font-size: 1rem; margin-bottom: 1.5rem;">Register now</button> <%# Primary action to execute the new account creation logic flow %>
-    
-    <label style="display: flex; align-items: flex-start; gap: 0.8rem; margin-bottom: 2rem; font-size: 0.9rem; cursor: pointer; color: var(--gray-800);"> <%# legal agreement checkbox for terms and conditions shown in mockup prototypes %>
-      <input type="checkbox" name="terms" style="width: 18px; height: 18px; margin-top: 3px;" required> <%# mandatory user toggle for legal compliance agreement logic awareness %>
-      I agree with Terms and Conditions <%# visual label for the legal agreement checkbox context awareness %>
-    </label> <!--/ .terms-agreement-line -->
+    <div style="margin-bottom: 1.5rem;">
+      <label for="phone" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Phone</label>
+      <div style="display: flex; border: 1px solid var(--gray-400); border-radius: var(--border-radius); overflow: hidden;">
+        <select style="border: none; background: #f8f9fa; padding: 0.6rem; border-right: 1px solid var(--gray-400); outline: none;">
+          <option>UZ +998</option>
+        </select>
+        <input type="tel" id="phone" name="phone" style="border: none; padding: 0.6rem; width: 100%; outline: none;" placeholder="00-000-00-00">
+      </div>
+    </div>
 
-  </form> <%# End of the secure user registration form container %>
+    <div style="margin-bottom: 1.5rem;">
+      <label for="password" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Create password</label>
+      <input type="password" id="password" name="password" class="form-control" placeholder="At least 6 characters" required>
+    </div>
 
-  <hr style="border: 0; border-top: 1px solid var(--gray-400); margin: 2rem 0;"> <%# visual separator for redirecting existing users back to login flow %>
+    <div style="margin-bottom: 2rem;">
+      <label for="confirmPassword" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Repeat password</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Type here" required>
+    </div>
 
-  <p style="text-align: center; font-size: 0.95rem;"> <%# helper text to redirect already authenticated users to login flow context labels %>
-    Already have an account? <a href="/login" style="color: var(--primary-color); font-weight: 600;">Log In</a> <%# Primary link to the login page for existing user access logic awareness %>
-  </p> <!--/ .login-redirect-footer -->
+    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.8rem; font-size: 1rem; margin-bottom: 1.5rem;">Register now</button>
 
-</div> <!--/ .auth-card-container -->
+    <label style="display: flex; align-items: flex-start; gap: 0.8rem; margin-bottom: 2rem; font-size: 0.9rem; cursor: pointer; color: var(--gray-800);">
+      <input type="checkbox" name="terms" style="width: 18px; height: 18px; margin-top: 3px;" required>
+      I agree with Terms and Conditions
+    </label>
+
+  </form>
+
+  <hr style="border: 0; border-top: 1px solid var(--gray-400); margin: 2rem 0;">
+
+  <p style="text-align: center; font-size: 0.95rem;">
+    Already have an account? <a href="/login" style="color: var(--primary-color); font-weight: 600;">Log In</a>
+  </p>
+
+</div>
 
 /*
 SUMMARY:
@@ -65,3 +65,4 @@ SUMMARY:
 - It features a centered layout, multi-part form rows, and clear legal agreement checkboxes matching the mockup prototypes.
 - It provides a high-quality onboarding experience that focuses on clarity and user data validation requirements.
 */
+

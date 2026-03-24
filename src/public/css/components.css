@@ -1,117 +1,118 @@
-.product-card { /* Style for individual product containers as seen in the grid and list views */
-  background-color: var(--white); /* Use a clean white card background */
-  border: 1px solid var(--gray-400); /* Add a subtle border to define the card's boundary */
-  border-radius: var(--border-radius); /* Apply standard rounded corners */
-  padding: 1.2rem; /* Set internal padding for the product content */
-  display: flex; /* Allow flexible internal layout */
-  flex-direction: column; /* Stack the image and info vertically */
-  height: 100%; /* Ensure all cards in a row have uniform height */
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animate hover effects for a premium feel */
-} /* End of product card container styling */
-/* This is a blank line for readability */
-.product-card:hover { /* Add hover interactivity for the product cards */
-  transform: translateY(-5px); /* Lift the card slightly for visual impact */
-  box-shadow: var(--box-shadow-hover); /* Apply a stronger shadow on hover */
-} /* End of card hover state */
-/* This is a blank line for readability */
-.product-image-container { /* Dedicated wrapper for the product thumbnail */
-  width: 100%; /* Fill the card width */
-  height: 200px; /* Set a consistent height for the product image area */
-  display: flex; /* Center the image within its container */
-  justify-content: center; /* Horizontal centering */
-  align-items: center; /* Vertical centering */
-  margin-bottom: 1rem; /* Add spacing below the image */
-  overflow: hidden; /* Prevent oversized images from leaking out */
-} /* End of image container styling */
-/* This is a blank line for readability */
-.product-image { /* Actual product thumbnail image styling */
-  max-height: 100%; /* Ensure image fits within the fixed height area */
-  object-fit: contain; /* Maintain aspect ratio for product clarity */
-} /* End of product image styling */
-/* This is a blank line for readability */
-.product-info { /* Container for text details like name, price, and ratings */
-  padding-top: 1rem; /* Add spacing above the text content */
-  border-top: 1px solid var(--gray-300); /* Add a separator above the text */
-} /* End of info container styling */
-/* This is a blank line for readability */
-.product-price { /* Highlighted price display as seen in the prototype */
-  font-size: 1.25rem; /* Use a larger font for price prominence */
-  font-weight: 700; /* Set to bold for clear visibility at a glance */
-  color: var(--dark-color); /* Use primary text color */
-  margin-bottom: 0.5rem; /* Add vertical spacing below the price */
-} /* End of price styling */
-/* This is a blank line for readability */
-.product-title { /* Product name label in the grid view */
-  font-size: 1rem; /* Standard readable font size */
-  font-weight: 400; /* Use a regular weight to keep the UI clean */
-  color: var(--gray-800); /* Use secondary gray text color */
-  margin-bottom: 1rem; /* Add vertical spacing below the name */
-  display: -webkit-box; /* Use line clamping for clean text truncation */
-  -webkit-line-clamp: 2; /* Limit the title to two lines */
-  -webkit-box-orient: vertical; /* Set text orientation to vertical */
-  overflow: hidden; /* Hide the overflow text */
-} /* End of product title styling */
-/* This is a blank line for readability */
-.badge-featured { /* Custom label for featured items or sales */
-  background-color: var(--accent-color); /* Highlight featured items with accent red */
-  color: var(--white); /* Set text color to white for visibility */
-  padding: 0.2rem 0.6rem; /* Use tight padding for a compact look */
-  border-radius: 4px; /* Add slight rounding consistent with other UI items */
-  font-size: 0.7rem; /* Use small text for meta labels */
-  font-weight: 700; /* Set to bold for impact */
-  text-transform: uppercase; /* Use all caps for badge emphasis */
-} /* End of featured badge styling */
-/* This is a blank line for readability */
-.form-group { /* Standard container for inputs and their associated labels */
-  margin-bottom: 1.5rem; /* Add vertical spacing between form fields */
-} /* End of form group styling */
-/* This is a blank line for readability */
-.form-label { /* Styling for textual labels in forms as seen in prototype inputs */
-  display: block; /* Ensure labels take their own line above inputs */
-  font-size: 0.9rem; /* Set a clear readable font size */
-  font-weight: 500; /* Use medium weight for clear association */
-  margin-bottom: 0.5rem; /* Add small spacing between label and input */
-  color: var(--dark-color); /* Use the primary text color */
-} /* End of form label styling */
-/* This is a blank line for readability */
-.form-control { /* Styling for text inputs and dropdown selects throughout the app */
-  width: 100%; /* Fill the available form container width */
-  padding: 0.8rem 1rem; /* Set comfortable internal padding for user input */
-  border: 1px solid var(--gray-500); /* Use a subtle neutral border for input boxes */
-  border-radius: var(--border-radius); /* Apply standard rounding consistent with design tokens */
-  font-family: inherit; /* Inherit the primary application font stack */
-  font-size: 1rem; /* Standard font size for input text */
-  background-color: var(--white); /* Use pure white for input background accessibility */
-  transition: border-color 0.2s ease; /* Animate border color changes for feedback */
-} /* End of form control styling */
-/* This is a blank line for readability */
-.form-control:focus { /* Enhanced styling for active form inputs */
-  border-color: var(--primary-color); /* Use brand blue to highlight the focused field */
-  outline: none; /* Disable default browser focus rings for custom brand styling */
-} /* End of form control focus state */
-/* This is a blank line for readability */
-.card-sidebar { /* Sidebar filter card used in the product listing page results */
-  background: var(--white); /* Use pure white card background */
-  padding: 1rem; /* Set internal padding for filter sections */
-  border: 1px solid var(--gray-400); /* Add a subtle border to the sidebar container */
-  border-radius: var(--border-radius); /* Apply standard design rounding */
-  margin-bottom: 1rem; /* Add vertical spacing between different filter blocks */
-} /* End of sidebar card styling */
-/* This is a blank line for readability */
-.filter-list li { /* Styling for individual items in the category/brand filters */
-  padding: 0.4rem 0; /* Add vertical spacing between filter options */
-  font-size: 0.95rem; /* Use a standard font size for filter labels */
-  color: var(--gray-800); /* Use secondary gray text for filter options */
-  cursor: pointer; /* Use pointer cursor to indicate filter interactivity */
-} /* End of filter list item styling */
-/* This is a blank line for readability */
-.filter-list li:hover { /* Add hover effect for interactive filter options */
-  color: var(--primary-color); /* Highlight option in brand blue on hover */
-} /* End of filter list item hover state */
-/* This is a blank line for readability */
+.product-card {
+  background-color: var(--white);
+  border: 1px solid var(--gray-400);
+  border-radius: var(--border-radius);
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.product-image-container {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.product-image {
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product-info {
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray-300);
+}
+
+.product-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 0.5rem;
+}
+
+.product-title {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--gray-800);
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.badge-featured {
+  background-color: var(--accent-color);
+  color: var(--white);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--dark-color);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--gray-500);
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: var(--white);
+  transition: border-color 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.card-sidebar {
+  background: var(--white);
+  padding: 1rem;
+  border: 1px solid var(--gray-400);
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+.filter-list li {
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  cursor: pointer;
+}
+
+.filter-list li:hover {
+  color: var(--primary-color);
+}
+
 /*
 SUMMARY:
 - This file defines the individual UI components of the ecommerce store based on the prototype.
 - It includes product cards, input forms, and sidebar filters with precise styling and transitions.
 - It ensures that each interactive element provides visual feedback and follows the design system.
 */
+

@@ -1,61 +1,61 @@
-<%- layout('layouts/main') %> <%# use the main EJS layout for the administrative product creation page %>
+<%- layout('layouts/main') %>
 
-<div style="max-width: 800px; margin: 3rem auto; padding: 2.5rem; border: 1px solid #eee; border-radius: var(--border-radius); box-shadow: 0 10px 25px rgba(0,0,0,0.05);"> <%# wide container for the product creation form with professional styling %>
-  <div style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1rem;"> <%# header section for the product addition panel %>
-    <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Add New Product</h2> <%# primary title for the product creation page %>
-    <p style="color: #666;">Provide the necessary details to list a new product in the store database.</p> <%# instruction subtext for the administrator filling out the form %>
-  </div> <%# end of the header section for product addition %>
+<div style="max-width: 800px; margin: 3rem auto; padding: 2.5rem; border: 1px solid #eee; border-radius: var(--border-radius); box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
+  <div style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
+    <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Add New Product</h2>
+    <p style="color: #666;">Provide the necessary details to list a new product in the store database.</p>
+  </div>
 
-  <% if (typeof error !== 'undefined') { %> <%# check if a database insertion error was triggered during the product save attempt %>
-    <div style="background: #fdf2f2; color: var(--error-color); padding: 1rem; border-radius: 4px; border: 1px solid #fbd5d5; margin-bottom: 2rem;"> <%# error alert box displaying validation or database failure messages %>
-      <%= error %> <%# print the specific error message text returned from the controller or model %>
-    </div> <%# end of the error alert box container %>
-  <% } %> <%# end of the server-side error message check condition %>
+  <% if (typeof error !== 'undefined') { %>
+    <div style="background: #fdf2f2; color: var(--error-color); padding: 1rem; border-radius: 4px; border: 1px solid #fbd5d5; margin-bottom: 2rem;">
+      <%= error %>
+    </div>
+  <% } %>
 
-  <form action="/admin/add-product" method="POST"> <%# initialize the form to send product details to the admin creation route via POST %>
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;"> <%# use a two-column grid layout for a cleaner form structure on desktop %>
-      <div class="form-group"> <%# input group for the product's identifying name %>
-        <label class="form-label">Product Name</label> <%# label identifying the input field for the product title %>
-        <input type="text" name="name" class="form-control" placeholder="e.g. Leather Jacket" required> <%# required text input for the name of the new product %>
-      </div> <%# end of the product name group %>
+  <form action="/admin/add-product" method="POST">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <div class="form-group">
+        <label class="form-label">Product Name</label>
+        <input type="text" name="name" class="form-control" placeholder="e.g. Leather Jacket" required>
+      </div>
 
-      <div class="form-group"> <%# input group for the product's selling price %>
-        <label class="form-label">Price ($)</label> <%# label for the currency-based price input field %>
-        <input type="number" name="price" step="0.01" class="form-control" placeholder="0.00" required> <%# required numeric input for the product price with decimal precision %>
-      </div> <%# end of the price input group %>
+      <div class="form-group">
+        <label class="form-label">Price ($)</label>
+        <input type="number" name="price" step="0.01" class="form-control" placeholder="0.00" required>
+      </div>
 
-      <div class="form-group"> <%# input group for the product's primary category %>
-        <label class="form-label">Category</label> <%# label for selecting the product categorization dropdown %>
-        <input type="text" name="category" class="form-control" placeholder="e.g. Apparel" required> <%# required text input to specify the category of the item %>
-      </div> <%# end of the category input group %>
+      <div class="form-group">
+        <label class="form-label">Category</label>
+        <input type="text" name="category" class="form-control" placeholder="e.g. Apparel" required>
+      </div>
 
-      <div class="form-group"> <%# input group for the product's brand or manufacturer %>
-        <label class="form-label">Brand</label> <%# label for identifying the maker of the product %>
-        <input type="text" name="brand" class="form-control" placeholder="e.g. UrbanStyle" required> <%# required text input to specify the brand of the item %>
-      </div> <%# end of the brand input group %>
+      <div class="form-group">
+        <label class="form-label">Brand</label>
+        <input type="text" name="brand" class="form-control" placeholder="e.g. UrbanStyle" required>
+      </div>
 
-      <div class="form-group" style="grid-column: span 2;"> <%# input group for the external image link spanning both columns %>
-        <label class="form-label">Image URL</label> <%# label for the field containing the web link to a product photo %>
-        <input type="url" name="image" class="form-control" placeholder="https://example.com/image.jpg" required> <%# required URL input for the main product visual asset %>
-      </div> <%# end of the image URL group %>
+      <div class="form-group" style="grid-column: span 2;">
+        <label class="form-label">Image URL</label>
+        <input type="url" name="image" class="form-control" placeholder="https://example.com/image.jpg" required>
+      </div>
 
-      <div class="form-group" style="grid-column: span 2;"> <%# input group for the stock quantity level spanning across the form %>
-        <label class="form-label">Stock Quantity</label> <%# label for the inventory count input field %>
-        <input type="number" name="stock" class="form-control" placeholder="0" required> <%# required numeric input for the number of items available for sale %>
-      </div> <%# end of the stock count group %>
+      <div class="form-group" style="grid-column: span 2;">
+        <label class="form-label">Stock Quantity</label>
+        <input type="number" name="stock" class="form-control" placeholder="0" required>
+      </div>
 
-      <div class="form-group" style="grid-column: span 2;"> <%# input group for the detailed product description box %>
-        <label class="form-label">Description</label> <%# label for the larger text area summarizing the product features %>
-        <textarea name="description" class="form-control" rows="5" placeholder="Detailed product description..." required></textarea> <%# required multi-line text area for the full product summary %>
-      </div> <%# end of the product description group %>
-    </div> <%# end of the two-column form grid layout section %>
+      <div class="form-group" style="grid-column: span 2;">
+        <label class="form-label">Description</label>
+        <textarea name="description" class="form-control" rows="5" placeholder="Detailed product description..." required></textarea>
+      </div>
+    </div>
 
-    <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: flex-end;"> <%# footer area for form action buttons aligned to the right side %>
-      <a href="/products" class="btn" style="background: #eee;">Cancel</a> <%# link for the admin to abandon changes and return to the product directory %>
-      <button type="submit" class="btn btn-primary" style="padding: 10px 40px;">Save Product</button> <%# main action button to validate and submit the new product to the database %>
-    </div> <%# end of the form footer action buttons section %>
-  </form> <%# end of the administrative product creation form section %>
-</div> <%# end of the centered product addition container div %>
+    <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: flex-end;">
+      <a href="/products" class="btn" style="background: #eee;">Cancel</a>
+      <button type="submit" class="btn btn-primary" style="padding: 10px 40px;">Save Product</button>
+    </div>
+  </form>
+</div>
 
 /*
 SUMMARY:
@@ -63,3 +63,4 @@ SUMMARY:
 - It provides input fields for all required product attributes, including price, category, and images.
 - It features a clean, professional grid layout to make the data entry process as simple and efficient as possible.
 */
+

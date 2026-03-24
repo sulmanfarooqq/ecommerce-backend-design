@@ -1,26 +1,26 @@
-<%- layout('layouts/main') %> <%# use the main EJS layout for the application's error message page %>
+<%- layout('layouts/main') %>
 
-<div style="text-align: center; padding: 6rem 0;"> <%# vertically centered container for the error message content section %>
-  <div style="font-size: 5rem; color: var(--error-color); margin-bottom: 2rem;"> <%# large visual icon or status for errors to grab user attention %>
-    <i class="error-emoji">⚠️</i> <%# display a warning emoji to signify an issue occurred %>
-  </div> <%# end of the visual error indicator section %>
-  
-  <h1 style="font-size: 3rem; margin-bottom: 1rem;">Oops! Something went wrong</h1> <%# main headline for the catch-all error handling page %>
-  <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;"> <%# focused subtext container providing additional context for the error %>
-    <%= message %> <%# print the specific error message provided by the global error handler middleware %>
-  </p> <%# end of the error detail text container %>
-  
-  <% if (typeof error !== 'undefined' && error.stack) { %> <%# check if the stack trace should be shown (e.g., in a development environment) %>
-    <div style="background: #f4f4f4; padding: 2rem; border-radius: 8px; text-align: left; max-width: 800px; margin: 2rem auto; overflow-x: auto;"> <%# container for displaying the developer-focused error stack trace %>
-      <pre style="font-family: monospace; font-size: 0.9rem; color: #555;"><%= error.stack %></pre> <%# print the raw stack trace for debugging purposes %>
-    </div> <%# end of the vertical stack trace display container %>
-  <% } %> <%# end of the developer-focused stack trace condition %>
+<div style="text-align: center; padding: 6rem 0;">
+  <div style="font-size: 5rem; color: var(--error-color); margin-bottom: 2rem;">
+    <i class="error-emoji">⚠️</i>
+  </div>
 
-  <div style="margin-top: 3rem;"> <%# area for user navigation links to recover from the error state %>
-    <a href="/" class="btn btn-primary">Return to Home</a> <%# primary call-to-action to lead the user back to a safe known state %>
-    <a href="javascript:history.back()" class="btn" style="background: #eee; margin-left: 1rem;">Go Back</a> <%# secondary button to allow the user to return to their previous step %>
-  </div> <%# end of the recovery navigation area section %>
-</div> <%# end of the centered error message container section %>
+  <h1 style="font-size: 3rem; margin-bottom: 1rem;">Oops! Something went wrong</h1>
+  <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+    <%= message %>
+  </p>
+
+  <% if (typeof error !== 'undefined' && error.stack) { %>
+    <div style="background: #f4f4f4; padding: 2rem; border-radius: 8px; text-align: left; max-width: 800px; margin: 2rem auto; overflow-x: auto;">
+      <pre style="font-family: monospace; font-size: 0.9rem; color: #555;"><%= error.stack %></pre>
+    </div>
+  <% } %>
+
+  <div style="margin-top: 3rem;">
+    <a href="/" class="btn btn-primary">Return to Home</a>
+    <a href="javascript:history.back()" class="btn" style="background: #eee; margin-left: 1rem;">Go Back</a>
+  </div>
+</div>
 
 /*
 SUMMARY:
@@ -28,3 +28,4 @@ SUMMARY:
 - It provides a user-friendly message for shoppers while optionally showing technical data for developers during testing.
 - It includes multiple navigation paths to help users successfully recover from a broken state and stay engaged.
 */
+

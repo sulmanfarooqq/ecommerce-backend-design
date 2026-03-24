@@ -1,28 +1,27 @@
-/* Tablet Responsive Styles */
-@media (max-width: 992px) { /* Define styles for screens smaller than 992px */
-  .container { /* Set a consistent container width for tablets */
-    max-width: 95%; /* Adjust the container to occupy 90% of the screen width */
-  } /* End of container styles for tablets */
-  
-  .footer-content { /* Adjust the footer grid for smaller screens */
-    grid-template-columns: repeat(2, 1fr); /* Set the footer grid to only two columns */
-  } /* End of footer-content styles for tablets */
-} /* End of tablet media query */
 
-/* Mobile Responsive Styles */
-@media (max-width: 768px) { /* Define styles for screens smaller than 768px */
-  .nav-links { /* Hide the standard horizontal navigation links on mobile */
-    display: none; /* Hide the links for a cleaner mobile interface */
-  } /* End of nav-links styles for mobile */
-  
-  .product-grid { /* Adjust the product list grid for mobile users */
-    grid-template-columns: 1fr; /* Set the grid to display products in a single column */
-  } /* End of product-grid styles for mobile */
-  
-  .footer-content { /* Further simplify the footer grid on mobile */
-    grid-template-columns: 1fr; /* Stack footer sections vertically */
-  } /* End of footer-content styles for mobile */
-} /* End of mobile media query */
+@media (max-width: 992px) {
+  .container {
+    max-width: 95%;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
 
 /*
 SUMMARY:
@@ -30,3 +29,4 @@ SUMMARY:
 - It provides specific adjustments for tablets and mobile devices to maintain usability.
 - It handles complex layout changes like switching from multi-column grids to single-column stacks.
 */
+
