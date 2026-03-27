@@ -4,13 +4,13 @@
   "description": "Premium MERN eCommerce Storefront",
   "main": "backend/server.js",
   "engines": {
-    "node": ">=18.0.0"
+    "node": "24.x"
   },
   "scripts": {
     "start": "node backend/server.js",
     "backend": "cd backend && npm install",
-    "frontend": "cd frontend && npm install && npm run build",
-    "admin": "cd admin && npm install && npm run build",
+    "frontend": "cd frontend && npm install --include=dev && npm run build",
+    "admin": "cd admin && npm install --include=dev && npm run build",
     "heroku-postbuild": "npm run backend && npm run frontend && npm run admin"
   },
   "keywords": [
