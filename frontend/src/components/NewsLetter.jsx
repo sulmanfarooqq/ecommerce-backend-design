@@ -1,37 +1,35 @@
 import React from "react";
 
 const NewsLetter = () => {
-  const onSubmitHandler = (e) => {
-    e.preventDefault;
+  const onSubmitHandler = (event) => {
+    event.preventDefault();
   };
 
   return (
-    <div className=" text-center">
-      <p className="text-2xl font-medium text-gray-800">
-        Subscribe now &amp; get 20% off
-      </p>
-      <p className="text-gray-400 mt-3">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry.
-      </p>
-      <form
-        onSubmit={onSubmitHandler}
-        className="w-full sm:w-1/2 flex items-center gap-3 mx-auto my-6 border pl-3"
-      >
-        <input
-          className="w-full sm:flex-1 outline-none"
-          type="email"
-          placeholder="Enter your email"
-          required
-        />
-        <button
-          type="submit"
-          className="bg-black text-white text-xs px-10 py-4"
+    <section className="border-t border-[var(--line-soft)] py-8">
+      <div className="mx-auto max-w-3xl text-center">
+        <p className="text-2xl font-bold tracking-tight text-[var(--ink)]">
+          Subscribe on our newsletter
+        </p>
+        <p className="mt-2 text-sm text-[var(--ink-muted)]">
+          Get daily news on upcoming offers from many suppliers all over the world.
+        </p>
+        <form
+          onSubmit={onSubmitHandler}
+          className="mx-auto mt-5 flex max-w-xl flex-col gap-3 sm:flex-row"
         >
-          SUBSCRIBE
-        </button>
-      </form>
-    </div>
+          <input
+            className="flex-1 rounded-xl border border-[var(--line-soft)] bg-white px-4 py-3 text-sm outline-none"
+            type="email"
+            placeholder="Email"
+            required
+          />
+          <button className="rounded-xl bg-[var(--brand)] px-6 py-3 text-sm font-semibold text-white" type="submit">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </section>
   );
 };
 

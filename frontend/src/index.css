@@ -1,30 +1,114 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --surface-page: hsl(210, 20%, 99%);
+  --surface-muted: hsl(210, 20%, 96%);
+  --surface-card: hsl(0, 0%, 100%);
+  --surface-accent: hsl(210, 40%, 98%);
+  
+  --line-soft: hsl(210, 24%, 94%);
+  --line-strong: hsl(210, 24%, 88%);
+  
+  --ink: hsl(220, 24%, 12%);
+  --ink-muted: hsl(220, 12%, 46%);
+  
+  --brand: hsl(215, 85%, 52%);
+  --brand-deep: hsl(215, 85%, 42%);
+  --success: hsl(142, 70%, 45%);
+  --warm: hsl(35, 100%, 96%);
+  --hero-mint: hsl(168, 50%, 92%);
+  
+  --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-premium: 0 20px 25px -5px rgb(0 0 0 / 0.04), 0 8px 10px -6px rgb(0 0 0 / 0.04);
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.011em;
+}
+
+html {
+  background: var(--surface-page);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background-color: var(--surface-page);
+}
+
 a.active hr {
   display: block;
 }
 
-* {
-  font-family: Outfit;
-}
-
-.prata-regular {
-  font-family: "Prata", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 ::-webkit-scrollbar {
-  display: none;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@layer components {
+  .market-card {
+    @apply rounded-2xl border bg-white transition-all duration-300;
+    border-color: var(--line-soft);
+    box-shadow: var(--shadow-card);
+  }
+
+  .market-card:hover {
+    box-shadow: var(--shadow-premium);
+  }
+
+  .market-soft-card {
+    @apply rounded-2xl border;
+    border-color: var(--line-soft);
+    background: var(--surface-accent);
+  }
+
+  .market-pill {
+    @apply inline-flex items-center rounded-full border px-3 py-1 text-[11px] font-bold uppercase tracking-wider;
+    border-color: var(--line-strong);
+    color: var(--ink-muted);
+    background: white;
+  }
+
+  .market-button {
+    @apply inline-flex items-center justify-center rounded-xl px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 active:scale-95;
+    background: var(--brand);
+    box-shadow: 0 4px 12px hsla(215, 85%, 52%, 0.24);
+  }
+
+  .market-button:hover {
+    background: var(--brand-deep);
+    box-shadow: 0 6px 16px hsla(215, 85%, 42%, 0.32);
+  }
+
+  .section-heading {
+    @apply mb-6 flex items-center justify-between gap-3;
+  }
+
+  .section-heading h2 {
+    @apply text-xl font-extrabold tracking-tight sm:text-2xl;
+    color: var(--ink);
+  }
 }
 
 @media (max-width: 640px) {
   a.active {
-    background-color: black;
-    color: white;
+    background: hsla(215, 85%, 52%, 0.08);
+    color: var(--brand);
   }
 }

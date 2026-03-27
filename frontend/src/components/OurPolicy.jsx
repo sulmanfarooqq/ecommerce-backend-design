@@ -1,37 +1,38 @@
 import React from "react";
-import { assets } from "../assets/frontend_assets/assets";
+
+const policies = [
+  {
+    title: "Secure payment",
+    description: "Have you ever finally just",
+    icon: "🔒",
+  },
+  {
+    title: "Customer support",
+    description: "Always-on service for buyers",
+    icon: "💬",
+  },
+  {
+    title: "Free delivery",
+    description: "Marketplace-style shipping promise",
+    icon: "🚚",
+  },
+];
 
 const OurPolicy = () => {
   return (
-    <div className="flex flex-col sm:flex-row justify-around gap-12 sm:gap-2 text-center py-20 text-xs sm:text-sm md:text-base text-gray-700">
-      <div>
-        <img
-          className="w-12 m-auto mb-5"
-          src={assets.exchange_icon}
-          alt="exchange_icon"
-        />
-        <p className="font-semibold">Easy Exchange Policy</p>
-        <p className=" text-gray-400">We offer hassle free exchange policy</p>
-      </div>
-      <div>
-        <img
-          className="w-12 m-auto mb-5"
-          src={assets.quality_icon}
-          alt="quality_icon"
-        />
-        <p className="font-semibold">7 Days Return Policy</p>
-        <p className=" text-gray-400">We provide 7 days free return policy </p>
-      </div>
-      <div>
-        <img
-          className="w-12 m-auto mb-5"
-          src={assets.support_img}
-          alt="support"
-        />
-        <p className="font-semibold">Best customer support</p>
-        <p className=" text-gray-400">We provide 24/7 customer support</p>
-      </div>
-    </div>
+    <section className="grid gap-4 md:grid-cols-3">
+      {policies.map((item) => (
+        <div key={item.title} className="market-card flex items-center gap-4 p-4">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--surface-muted)] text-xl">
+            {item.icon}
+          </div>
+          <div>
+            <p className="font-semibold text-[var(--ink)]">{item.title}</p>
+            <p className="text-sm text-[var(--ink-muted)]">{item.description}</p>
+          </div>
+        </div>
+      ))}
+    </section>
   );
 };
 

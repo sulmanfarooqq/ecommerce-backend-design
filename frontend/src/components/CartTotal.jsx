@@ -1,42 +1,58 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../contexts/ShopContext";
-import Title from "./Title";
 
 const CartTotal = () => {
   const { currency, deliveryFee, getCartAmount } = useContext(ShopContext);
+  const subtotal = getCartAmount();
+  const tax = subtotal ? Math.round(subtotal * 0.05) : 0;
+  const total = subtotal ? subtotal + deliveryFee + tax : 0;
 
   return (
-    <div className="w-full">
-      <div className="text-2xl">
-        <Title text1={"CART"} text2={"TOTALS"} />
+    <div className="market-card p-5">
+      <p className="text-lg font-bold">Have a coupon?</p>
+      <div className="mt-3 flex gap-2">
+        <input
+          className="min-w-0 flex-1 rounded-xl border border-[var(--line-soft)] px-4 py-3 text-sm outline-none"
+          placeholder="Add coupon"
+          readOnly
+          value=""
+        />
+        <button className="rounded-xl border border-[var(--line-soft)] px-4 py-3 text-sm font-semibold text-[var(--brand)]" type="button">
+          Apply
+        </button>
       </div>
-      <div className="flex flex-col gap-2 mt-2 text-sm ">
-        <div className="flex justify-between">
-          <p>Subtotal</p>
-          <p>
+
+      <div className="mt-5 space-y-3 text-sm">
+        <div className="flex items-center justify-between">
+          <span className="text-[var(--ink-muted)]">Subtotal:</span>
+          <span className="font-semibold">
             {currency}
-            {getCartAmount()}.00
-          </p>
+            {subtotal.toFixed(2)}
+          </span>
         </div>
-        <hr />
-        <div>
-          <div className="flex justify-between">
-            <p>Shipping Fee</p>
-            <p>
-              {currency}
-              {deliveryFee}.00
-            </p>
-          </div>
+        <div className="flex items-center justify-between">
+          <span className="text-[var(--ink-muted)]">Shipping:</span>
+          <span className="font-semibold">
+            {currency}
+            {deliveryFee.toFixed(2)}
+          </span>
         </div>
-        <hr />
-        <div>
-          <div className="flex justify-between">
-            <b>Total</b>
-            <b>
-              {currency}
-              {getCartAmount() === 0 ? 0 : getCartAmount() + deliveryFee}.00
-            </b>
-          </div>
+        <div className="flex items-center justify-between">
+          <span className="text-[var(--ink-muted)]">Tax:</span>
+          <span className="font-semibold text-[var(--success)]">
+            {currency}
+            {tax.toFixed(2)}
+          </span>
+        </div>
+      </div>
+
+      <div className="mt-5 border-t border-[var(--line-soft)] pt-4">
+        <div className="flex items-center justify-between text-lg font-bold">
+          <span>Total:</span>
+          <span>
+            {currency}
+            {total.toFixed(2)}
+          </span>
         </div>
       </div>
     </div>

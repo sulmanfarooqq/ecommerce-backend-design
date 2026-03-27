@@ -1,12 +1,21 @@
 import React, { useContext, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { assets } from "../assets/frontend_assets/assets";
-import { NavLink, Link } from "react-router-dom";
 import { ShopContext } from "../contexts/ShopContext";
+
+const navLinks = [
+  { label: "Home", path: "/" },
+  { label: "Collection", path: "/collection" },
+  { label: "About", path: "/about" },
+  { label: "Contact", path: "/contact" },
+];
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
   const {
     setShowSearch,
+    search,
+    setSearch,
     getCartCount,
     navigate,
     token,
@@ -14,130 +23,184 @@ const Navbar = () => {
     setCartItems,
   } = useContext(ShopContext);
 
-  const logout = async () => {
+  const logout = () => {
     localStorage.removeItem("token");
     setToken("");
     setCartItems({});
     navigate("/login");
   };
 
+  const submitSearch = (event) => {
+    event.preventDefault();
+    setShowSearch(true);
+    navigate("/collection");
+  };
+
   return (
-    <div className="flex items-center justify-between py-5 font-medium">
-      <Link to="/">
-        <img src={assets.logo} className="w-36" alt="forver_logo" />
-      </Link>
-      <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
-        <NavLink to="/" className="flex flex-col items-center gap-1">
-          <p>HOME</p>
-          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
-        </NavLink>
-        <NavLink to="/collection" className="flex flex-col items-center gap-1">
-          <p>COLLECTION</p>
-          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
-        </NavLink>
-        <NavLink to="/about" className="flex flex-col items-center gap-1">
-          <p>ABOUT</p>
-          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
-        </NavLink>
-        <NavLink to="/contact" className="flex flex-col items-center gap-1">
-          <p>CONTACT</p>
-          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
-        </NavLink>
-      </ul>
-      <div className="flex items-center gap-6">
-        <img
-          onClick={() => setShowSearch(true)}
-          src={assets.search_icon}
-          className="w-5 cursor-pointer"
-          alt="search_icon"
-        />
-        <div className="group relative">
-          <img
-            onClick={() => (token ? null : navigate("/login"))}
-            src={assets.profile_icon}
-            className="w-5 cursor-pointer"
-            alt="profile_icon"
-          />
-          {/* Dropdown menu */}
-          {token && (
-            <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4">
-              <div className="flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded">
-                {/* <p className="cursor-pointer hover:text-black">My Profile</p> */}
-                <p
-                  onClick={() => navigate("/orders")}
-                  className="cursor-pointer hover:text-black"
-                >
-                  Orders
-                </p>
-                <p onClick={logout} className="cursor-pointer hover:text-black">
-                  Logout
-                </p>
-              </div>
+    <header className="sticky top-0 z-30 border-b border-[var(--line-soft)] bg-white/95 backdrop-blur">
+      <div className="border-b border-[var(--line-soft)] bg-white">
+        <div className="mx-auto flex max-w-[1280px] items-center gap-3 px-3 py-3 sm:px-4 lg:px-6">
+          <button
+            onClick={() => setVisible(true)}
+            className="rounded-lg border border-[var(--line-soft)] p-2 sm:hidden"
+            type="button"
+          >
+            <img src={assets.menu_icon} className="h-4 w-4" alt="menu" />
+          </button>
+
+          <Link to="/" className="flex min-w-fit items-center gap-2">
+            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--brand)] text-sm font-bold text-white">
+              F
+            </span>
+            <div>
+              <p className="text-lg font-extrabold tracking-tight text-[var(--brand)]">
+                Forever
+              </p>
+              <p className="hidden text-[11px] text-[var(--ink-muted)] sm:block">
+                Premium Store
+              </p>
             </div>
-          )}
-        </div>
-        <Link to="/cart" className="relative">
-          <img src={assets.cart_icon} className="w-5 min-w-5" alt="cart_icon" />
-          <p className="absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]">
-            {getCartCount()}
-          </p>
-        </Link>
-        <img
-          onClick={() => setVisible(true)}
-          src={assets.menu_icon}
-          className="w-5 cursor-pointer sm:hidden"
-          alt="menu_icon"
-        />
-      </div>
-      {/* Sidebar menu for small screens */}
-      <div
-        className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${
-          visible ? "w-full" : "w-0"
-        }`}
-      >
-        <div className="flex flex-col text-gray-600">
-          <div
-            onClick={() => setVisible(false)}
-            className="flex items-center gap-4 p-3 cursor-pointer"
+          </Link>
+
+          <form
+            onSubmit={submitSearch}
+            className="hidden flex-1 items-stretch overflow-hidden rounded-xl border-2 border-[var(--brand)] bg-white sm:flex"
           >
-            <img
-              src={assets.dropdown_icon}
-              className="h-4 rotate-180"
-              alt="dropdown_icon"
+            <input
+              className="min-w-0 flex-1 px-4 text-sm outline-none"
+              type="text"
+              placeholder="Search our collection..."
+              value={search}
+              onChange={(event) => setSearch(event.target.value)}
             />
-            <p>Back</p>
+            <button className="bg-[var(--brand)] px-5 text-sm font-semibold text-white" type="submit">
+              Search
+            </button>
+          </form>
+
+          <div className="ml-auto flex items-center gap-2 sm:gap-4">
+            <button
+              onClick={() => {
+                setShowSearch(true);
+                navigate("/collection");
+              }}
+              className="rounded-lg border border-[var(--line-soft)] p-2 sm:hidden"
+              type="button"
+            >
+              <img src={assets.search_icon} className="h-4 w-4" alt="search" />
+            </button>
+
+            <button
+              onClick={() => (token ? navigate("/orders") : navigate("/login"))}
+              className="hidden items-center gap-2 text-xs text-[var(--ink-muted)] sm:flex"
+              type="button"
+            >
+              <img src={assets.profile_icon} className="h-4 w-4" alt="profile" />
+              <span>{token ? "Orders" : "Profile"}</span>
+            </button>
+
+            <Link to="/cart" className="relative rounded-lg border border-[var(--line-soft)] p-2">
+              <img src={assets.cart_icon} className="h-4 w-4" alt="cart" />
+              <span className="absolute -right-1 -top-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-[var(--brand)] px-1 text-[10px] font-bold text-white">
+                {getCartCount()}
+              </span>
+            </Link>
+
+            {token ? (
+              <button
+                onClick={logout}
+                className="hidden rounded-lg border border-[var(--line-soft)] px-3 py-2 text-xs font-semibold text-[var(--ink-muted)] sm:block"
+                type="button"
+              >
+                Logout
+              </button>
+            ) : (
+              <button
+                onClick={() => navigate("/login")}
+                className="hidden rounded-lg bg-[var(--brand)] px-3 py-2 text-xs font-semibold text-white sm:block"
+                type="button"
+              >
+                Sign in
+              </button>
+            )}
           </div>
-          <NavLink
-            onClick={() => setVisible(false)}
-            className="py-2 pl-6 border"
-            to="/"
-          >
-            HOME
-          </NavLink>
-          <NavLink
-            onClick={() => setVisible(false)}
-            className="py-2 pl-6 border"
-            to="/collection"
-          >
-            COLLECTION
-          </NavLink>
-          <NavLink
-            onClick={() => setVisible(false)}
-            className="py-2 pl-6 border"
-            to="/about"
-          >
-            ABOUT
-          </NavLink>
-          <NavLink
-            onClick={() => setVisible(false)}
-            className="py-2 pl-6 border"
-            to="/contact"
-          >
-            CONTACT
-          </NavLink>
         </div>
       </div>
-    </div>
+
+      <div className="hidden border-b border-[var(--line-soft)] bg-white sm:block">
+        <div className="mx-auto max-w-[1280px] px-3 py-2 sm:px-4 lg:px-6">
+          <nav className="flex items-center justify-around whitespace-nowrap">
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.path}
+                to={link.path}
+                className="px-6 py-2 text-sm font-bold uppercase tracking-widest text-[var(--ink)] transition-colors hover:text-[var(--brand)] active:scale-95"
+              >
+                {link.label}
+              </NavLink>
+            ))}
+          </nav>
+        </div>
+      </div>
+
+      <div
+        className={`fixed inset-0 z-40 transition ${visible ? "pointer-events-auto bg-slate-900/30" : "pointer-events-none bg-transparent"}`}
+      >
+        <div
+          className={`h-full w-[84%] max-w-sm bg-white p-5 shadow-2xl transition-transform ${visible ? "translate-x-0" : "-translate-x-full"}`}
+        >
+          <div className="mb-6 flex items-center justify-between">
+            <div>
+              <p className="text-lg font-bold text-[var(--brand)]">Brand</p>
+              <p className="text-xs text-[var(--ink-muted)]">Marketplace menu</p>
+            </div>
+            <button
+              onClick={() => setVisible(false)}
+              className="rounded-lg border border-[var(--line-soft)] px-3 py-2 text-sm"
+              type="button"
+            >
+              Close
+            </button>
+          </div>
+
+          <form onSubmit={submitSearch} className="mb-6 flex overflow-hidden rounded-xl border border-[var(--line-soft)]">
+            <input
+              className="min-w-0 flex-1 px-3 py-3 text-sm outline-none"
+              type="text"
+              placeholder="Search products"
+              value={search}
+              onChange={(event) => setSearch(event.target.value)}
+            />
+            <button className="bg-[var(--brand)] px-4 text-sm font-semibold text-white" type="submit">
+              Go
+            </button>
+          </form>
+
+          <div className="flex flex-col gap-2">
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.path}
+                onClick={() => setVisible(false)}
+                to={link.path}
+                className="rounded-xl border border-[var(--line-soft)] px-4 py-3 text-sm font-medium text-[var(--ink)]"
+              >
+                {link.label}
+              </NavLink>
+            ))}
+            <button
+              onClick={() => {
+                setVisible(false);
+                token ? logout() : navigate("/login");
+              }}
+              className="rounded-xl border border-[var(--line-soft)] px-4 py-3 text-left text-sm font-medium text-[var(--ink)]"
+              type="button"
+            >
+              {token ? "Logout" : "Sign in"}
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
   );
 };
 

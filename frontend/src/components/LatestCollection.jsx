@@ -5,27 +5,32 @@ import ProductItem from "./ProductItem";
 
 const LatestCollection = () => {
   const { products } = useContext(ShopContext);
-
   const [latestProducts, setLatestProducts] = useState([]);
 
   useEffect(() => {
-    setLatestProducts(products.slice(0, 10));
+    setLatestProducts(products.slice(0, 8));
   }, [products]);
 
   return (
-    <div className="my-10">
-      <div className="text-center py-8 text-3xl">
-        <Title text1={"LATEST"} text2={"COLLECTION"} />
-        <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the.
-        </p>
+    <section className="market-card h-full p-6 sm:p-10">
+      <div className="section-heading">
+        <div className="max-w-md">
+          <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[var(--brand)]">
+            Just In
+          </p>
+          <h2 className="mt-2 text-3xl font-black tracking-tight text-[var(--ink)] sm:text-4xl">
+            The New Arrivals
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-[var(--ink-muted)]">
+            Explore our latest curation of seasonal essentials, designed for the modern lifestyle.
+          </p>
+        </div>
       </div>
-      {/* Rendering products */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6">
-        {latestProducts.map((item, index) => (
+
+      <div className="mt-8 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {latestProducts.map((item) => (
           <ProductItem
-            key={index}
+            key={item._id}
             id={item._id}
             image={item.image}
             name={item.name}
@@ -33,7 +38,7 @@ const LatestCollection = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

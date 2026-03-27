@@ -1,42 +1,52 @@
 import React, { useContext, useEffect, useState } from "react";
-import { ShopContext } from "../contexts/ShopContext";
-import { assets } from "../assets/frontend_assets/assets";
 import { useLocation } from "react-router-dom";
+import { ShopContext } from "../contexts/ShopContext";
 
 const SearchBar = () => {
-  const { search, showSearch, setSearch, setShowSearch } =
-    useContext(ShopContext);
+  const { search, showSearch, setSearch, setShowSearch } = useContext(ShopContext);
   const location = useLocation();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    if (location.pathname.includes("collection")) {
-      setVisible(true);
-    } else {
-      setVisible(false);
-    }
-  }, [location]);
+    setVisible(location.pathname.includes("collection"));
+  }, [location.pathname]);
 
-  return showSearch && visible ? (
-    <div className="border-t border-b bg-gray-50 text-center">
-      <div className="inline-flex items-center justify-center border border-gray-400 px-5 py-2 my-5 mx-3 rounded-full w-3/4 sm:w-1/2">
-        <input
-          className="flex-1 outline-none bg-inherit text-sm"
-          type="text"
-          placeholder="Search"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        <img className="w-4" src={assets.search_icon} alt="search_icon" />
+  if (!showSearch || !visible) {
+    return null;
+  }
+
+  return (
+    <div className="border-b border-[var(--line-soft)] bg-white">
+      <div className="mx-auto flex max-w-[1280px] flex-col gap-3 px-3 py-3 sm:flex-row sm:items-center sm:px-4 lg:px-6">
+        <div className="flex flex-1 items-center overflow-hidden rounded-xl border border-[var(--line-soft)] bg-[var(--surface-muted)]">
+          <input
+            className="min-w-0 flex-1 bg-transparent px-4 py-3 text-sm outline-none"
+            type="text"
+            placeholder="Search in collection"
+            value={search}
+            onChange={(event) => setSearch(event.target.value)}
+          />
+          <span className="px-4 text-xs font-medium uppercase tracking-[0.2em] text-[var(--ink-muted)]">
+            Live
+          </span>
+        </div>
+        <div className="flex items-center gap-2 overflow-x-auto">
+          {["Summary", "Apple", "Price", "New arrival", "In stock"].map((chip) => (
+            <span key={chip} className="market-pill whitespace-nowrap">
+              {chip}
+            </span>
+          ))}
+          <button
+            onClick={() => setShowSearch(false)}
+            className="rounded-lg border border-[var(--line-soft)] px-3 py-2 text-sm text-[var(--ink-muted)]"
+            type="button"
+          >
+            Close
+          </button>
+        </div>
       </div>
-      <img
-        className="inline w-3 cursor-pointer"
-        onClick={() => setShowSearch(false)}
-        src={assets.cross_icon}
-        alt="cross_icon"
-      />
     </div>
-  ) : null;
+  );
 };
 
 export default SearchBar;
