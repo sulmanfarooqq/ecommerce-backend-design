@@ -10,3 +10,339 @@
 Browserslist: browsers data (caniuse-lite) is 14 months old. Please run:
   npx update-browserslist-db@latest
   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2m10:01:43 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Add.jsx, /src/index.css[22m
+[2m10:01:43 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Add.jsx, /src/index.css[22m
+[2m10:01:43 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\src\pages\Add.jsx: 'import' and 'export' may only appear at the top level. (333:0)
+
+[0m [90m 331 |[31m }[33m;[31m
+ [90m 332 |[31m
+[31m[1m>[22m[31m[90m 333 |[31m [36mexport[31m [36mdefault[31m [33mAdd[31m[33m;[31m
+ [90m     |[31m [31m[1m^[22m[31m
+ [90m 334 |[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/my/Desktop/gogo/Ecommerce-Store-Forever-MERN/admin/src/pages/Add.jsx[39m:333:0
+      at constructor (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:360:19)
+      at JSXParserMixin.raise (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:3327:19)
+      at JSXParserMixin.parseStatementContent (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12499:18)
+      at JSXParserMixin.parseStatementLike (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12396:17)
+      at JSXParserMixin.parseStatementListItem (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12376:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12950:61)
+      at JSXParserMixin.parseBlockBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12943:10)
+      at JSXParserMixin.parseBlock (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12931:10)
+      at JSXParserMixin.parseFunctionBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:11773:24)
+      at JSXParserMixin.parseArrowExpression (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:11748:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:11361:12)
+      at JSXParserMixin.parseExprAtom (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10996:23)
+      at JSXParserMixin.parseExprAtom (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:6937:20)
+      at JSXParserMixin.parseExprSubscripts (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10748:23)
+      at JSXParserMixin.parseUpdate (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10733:21)
+      at JSXParserMixin.parseMaybeUnary (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10713:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10566:61)
+      at JSXParserMixin.parseExprOps (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10571:23)
+      at JSXParserMixin.parseMaybeConditional (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10548:23)
+      at JSXParserMixin.parseMaybeAssign (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10511:21)
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10481:39
+      at JSXParserMixin.allowInAnd (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12085:16)
+      at JSXParserMixin.parseMaybeAssignAllowIn (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10481:17)
+      at JSXParserMixin.parseVar (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:13018:91)
+      at JSXParserMixin.parseVarStatement (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12864:10)
+      at JSXParserMixin.parseStatementContent (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12479:23)
+      at JSXParserMixin.parseStatementLike (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12396:17)
+      at JSXParserMixin.parseModuleItem (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12373:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12950:36)
+      at JSXParserMixin.parseBlockBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12943:10)
+      at JSXParserMixin.parseProgram (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12270:10)
+      at JSXParserMixin.parseTopLevel (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12260:25)
+      at JSXParserMixin.parse (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:14110:10)
+      at parse (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:14144:38)
+      at parser (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\core\lib\transformation\normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:261:32)
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:223:11)
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:189:28
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:113:33
+      at step (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:287:14)
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:273:13
+[2m10:01:43 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\src\pages\Add.jsx: 'import' and 'export' may only appear at the top level. (333:0)
+
+[0m [90m 331 |[31m }[33m;[31m
+ [90m 332 |[31m
+[31m[1m>[22m[31m[90m 333 |[31m [36mexport[31m [36mdefault[31m [33mAdd[31m[33m;[31m
+ [90m     |[31m [31m[1m^[22m[31m
+ [90m 334 |[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/my/Desktop/gogo/Ecommerce-Store-Forever-MERN/admin/src/pages/Add.jsx[39m:333:0
+      at constructor (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:360:19)
+      at JSXParserMixin.raise (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:3327:19)
+      at JSXParserMixin.parseStatementContent (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12499:18)
+      at JSXParserMixin.parseStatementLike (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12396:17)
+      at JSXParserMixin.parseStatementListItem (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12376:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12950:61)
+      at JSXParserMixin.parseBlockBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12943:10)
+      at JSXParserMixin.parseBlock (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12931:10)
+      at JSXParserMixin.parseFunctionBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:11773:24)
+      at JSXParserMixin.parseArrowExpression (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:11748:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:11361:12)
+      at JSXParserMixin.parseExprAtom (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10996:23)
+      at JSXParserMixin.parseExprAtom (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:6937:20)
+      at JSXParserMixin.parseExprSubscripts (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10748:23)
+      at JSXParserMixin.parseUpdate (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10733:21)
+      at JSXParserMixin.parseMaybeUnary (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10713:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10566:61)
+      at JSXParserMixin.parseExprOps (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10571:23)
+      at JSXParserMixin.parseMaybeConditional (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10548:23)
+      at JSXParserMixin.parseMaybeAssign (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10511:21)
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10481:39
+      at JSXParserMixin.allowInAnd (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12085:16)
+      at JSXParserMixin.parseMaybeAssignAllowIn (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10481:17)
+      at JSXParserMixin.parseVar (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:13018:91)
+      at JSXParserMixin.parseVarStatement (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12864:10)
+      at JSXParserMixin.parseStatementContent (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12479:23)
+      at JSXParserMixin.parseStatementLike (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12396:17)
+      at JSXParserMixin.parseModuleItem (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12373:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12950:36)
+      at JSXParserMixin.parseBlockBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12943:10)
+      at JSXParserMixin.parseProgram (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12270:10)
+      at JSXParserMixin.parseTopLevel (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12260:25)
+      at JSXParserMixin.parse (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:14110:10)
+      at parse (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:14144:38)
+      at parser (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\core\lib\transformation\normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:261:32)
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:223:11)
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:189:28
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:113:33
+      at step (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:287:14)
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:273:13
+[2m10:01:44 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\src\pages\Add.jsx: 'import' and 'export' may only appear at the top level. (333:0)
+
+[0m [90m 331 |[39m }[33m;[39m
+ [90m 332 |[39m
+[31m[1m>[22m[39m[90m 333 |[39m [36mexport[39m [36mdefault[39m [33mAdd[39m[33m;[39m
+ [90m     |[39m [31m[1m^[22m[39m
+ [90m 334 |[39m[0m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/my/Desktop/gogo/Ecommerce-Store-Forever-MERN/admin/src/pages/Add.jsx[39m:333:0
+[2m10:01:44 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\src\pages\Add.jsx: 'import' and 'export' may only appear at the top level. (333:0)
+
+[0m [90m 331 |[31m }[33m;[31m
+ [90m 332 |[31m
+[31m[1m>[22m[31m[90m 333 |[31m [36mexport[31m [36mdefault[31m [33mAdd[31m[33m;[31m
+ [90m     |[31m [31m[1m^[22m[31m
+ [90m 334 |[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/my/Desktop/gogo/Ecommerce-Store-Forever-MERN/admin/src/pages/Add.jsx[39m:333:0
+      at constructor (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:360:19)
+      at JSXParserMixin.raise (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:3327:19)
+      at JSXParserMixin.parseStatementContent (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12499:18)
+      at JSXParserMixin.parseStatementLike (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12396:17)
+      at JSXParserMixin.parseStatementListItem (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12376:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12950:61)
+      at JSXParserMixin.parseBlockBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12943:10)
+      at JSXParserMixin.parseBlock (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12931:10)
+      at JSXParserMixin.parseFunctionBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:11773:24)
+      at JSXParserMixin.parseArrowExpression (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:11748:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:11361:12)
+      at JSXParserMixin.parseExprAtom (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10996:23)
+      at JSXParserMixin.parseExprAtom (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:6937:20)
+      at JSXParserMixin.parseExprSubscripts (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10748:23)
+      at JSXParserMixin.parseUpdate (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10733:21)
+      at JSXParserMixin.parseMaybeUnary (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10713:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10566:61)
+      at JSXParserMixin.parseExprOps (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10571:23)
+      at JSXParserMixin.parseMaybeConditional (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10548:23)
+      at JSXParserMixin.parseMaybeAssign (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10511:21)
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10481:39
+      at JSXParserMixin.allowInAnd (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12085:16)
+      at JSXParserMixin.parseMaybeAssignAllowIn (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10481:17)
+      at JSXParserMixin.parseVar (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:13018:91)
+      at JSXParserMixin.parseVarStatement (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12864:10)
+      at JSXParserMixin.parseStatementContent (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12479:23)
+      at JSXParserMixin.parseStatementLike (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12396:17)
+      at JSXParserMixin.parseModuleItem (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12373:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12950:36)
+      at JSXParserMixin.parseBlockBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12943:10)
+      at JSXParserMixin.parseProgram (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12270:10)
+      at JSXParserMixin.parseTopLevel (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12260:25)
+      at JSXParserMixin.parse (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:14110:10)
+      at parse (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:14144:38)
+      at parser (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\core\lib\transformation\normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:261:32)
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:223:11)
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:189:28
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:113:33
+      at step (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:287:14)
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:273:13
+[2m10:02:02 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Add.jsx, /src/index.css[22m
+[2m10:02:02 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\src\pages\Add.jsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (271:4)
+
+[0m [90m 269 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 270 |[39m     [33m<[39m[33m/[39m[33mform[39m[33m>[39m
+[31m[1m>[22m[39m[90m 271 |[39m     [33m<[39m[33m/[39m[33mform[39m[33m>[39m
+ [90m     |[39m     [31m[1m^[22m[39m
+ [90m 272 |[39m   )[33m;[39m
+ [90m 273 |[39m }[33m;[39m
+ [90m 274 |[39m[0m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/my/Desktop/gogo/Ecommerce-Store-Forever-MERN/admin/src/pages/Add.jsx[39m:271:4
+[2m10:02:02 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\src\pages\Add.jsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (271:4)
+
+[0m [90m 269 |[31m       [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m 270 |[31m     [33m<[31m[33m/[31m[33mform[31m[33m>[31m
+[31m[1m>[22m[31m[90m 271 |[31m     [33m<[31m[33m/[31m[33mform[31m[33m>[31m
+ [90m     |[31m     [31m[1m^[22m[31m
+ [90m 272 |[31m   )[33m;[31m
+ [90m 273 |[31m }[33m;[31m
+ [90m 274 |[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/my/Desktop/gogo/Ecommerce-Store-Forever-MERN/admin/src/pages/Add.jsx[39m:271:4
+      at constructor (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:360:19)
+      at JSXParserMixin.raise (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:3327:19)
+      at JSXParserMixin.jsxParseElementAt (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:6915:18)
+      at JSXParserMixin.jsxParseElement (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:6922:17)
+      at JSXParserMixin.parseExprAtom (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:6932:19)
+      at JSXParserMixin.parseExprSubscripts (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10748:23)
+      at JSXParserMixin.parseUpdate (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10733:21)
+      at JSXParserMixin.parseMaybeUnary (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10713:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10566:61)
+      at JSXParserMixin.parseExprOps (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10571:23)
+      at JSXParserMixin.parseMaybeConditional (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10548:23)
+      at JSXParserMixin.parseMaybeAssign (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10511:21)
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10481:39
+      at JSXParserMixin.allowInAnd (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12090:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10481:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:11349:28)
+      at JSXParserMixin.parseExprAtom (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10996:23)
+      at JSXParserMixin.parseExprAtom (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:6937:20)
+      at JSXParserMixin.parseExprSubscripts (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10748:23)
+      at JSXParserMixin.parseUpdate (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10733:21)
+      at JSXParserMixin.parseMaybeUnary (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10713:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10566:61)
+      at JSXParserMixin.parseExprOps (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10571:23)
+      at JSXParserMixin.parseMaybeConditional (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10548:23)
+      at JSXParserMixin.parseMaybeAssign (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10511:21)
+      at JSXParserMixin.parseExpressionBase (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10465:23)
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10461:39
+      at JSXParserMixin.allowInAnd (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12085:16)
+      at JSXParserMixin.parseExpression (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10461:17)
+      at JSXParserMixin.parseReturnStatement (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12776:28)
+      at JSXParserMixin.parseStatementContent (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12427:21)
+      at JSXParserMixin.parseStatementLike (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12396:17)
+      at JSXParserMixin.parseStatementListItem (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12376:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12950:61)
+      at JSXParserMixin.parseBlockBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12943:10)
+      at JSXParserMixin.parseBlock (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12931:10)
+      at JSXParserMixin.parseFunctionBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:11773:24)
+      at JSXParserMixin.parseArrowExpression (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:11748:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:11361:12)
+      at JSXParserMixin.parseExprAtom (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10996:23)
+      at JSXParserMixin.parseExprAtom (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:6937:20)
+      at JSXParserMixin.parseExprSubscripts (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10748:23)
+      at JSXParserMixin.parseUpdate (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10733:21)
+      at JSXParserMixin.parseMaybeUnary (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10713:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10566:61)
+      at JSXParserMixin.parseExprOps (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10571:23)
+      at JSXParserMixin.parseMaybeConditional (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10548:23)
+      at JSXParserMixin.parseMaybeAssign (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10511:21)
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10481:39
+      at JSXParserMixin.allowInAnd (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12085:16)
+[2m10:02:34 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Add.jsx, /src/index.css[22m
+[2m10:02:34 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\src\pages\Add.jsx: 'import' and 'export' may only appear at the top level. (274:0)
+
+[0m [90m 272 |[39m }[33m;[39m
+ [90m 273 |[39m
+[31m[1m>[22m[39m[90m 274 |[39m [36mexport[39m [36mdefault[39m [33mAdd[39m[33m;[39m
+ [90m     |[39m [31m[1m^[22m[39m
+ [90m 275 |[39m[0m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/my/Desktop/gogo/Ecommerce-Store-Forever-MERN/admin/src/pages/Add.jsx[39m:274:0
+[2m10:02:34 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\src\pages\Add.jsx: 'import' and 'export' may only appear at the top level. (274:0)
+
+[0m [90m 272 |[31m }[33m;[31m
+ [90m 273 |[31m
+[31m[1m>[22m[31m[90m 274 |[31m [36mexport[31m [36mdefault[31m [33mAdd[31m[33m;[31m
+ [90m     |[31m [31m[1m^[22m[31m
+ [90m 275 |[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/my/Desktop/gogo/Ecommerce-Store-Forever-MERN/admin/src/pages/Add.jsx[39m:274:0
+      at constructor (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:360:19)
+      at JSXParserMixin.raise (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:3327:19)
+      at JSXParserMixin.parseStatementContent (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12499:18)
+      at JSXParserMixin.parseStatementLike (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12396:17)
+      at JSXParserMixin.parseStatementListItem (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12376:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12950:61)
+      at JSXParserMixin.parseBlockBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12943:10)
+      at JSXParserMixin.parseBlock (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12931:10)
+      at JSXParserMixin.parseFunctionBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:11773:24)
+      at JSXParserMixin.parseArrowExpression (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:11748:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:11361:12)
+      at JSXParserMixin.parseExprAtom (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10996:23)
+      at JSXParserMixin.parseExprAtom (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:6937:20)
+      at JSXParserMixin.parseExprSubscripts (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10748:23)
+      at JSXParserMixin.parseUpdate (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10733:21)
+      at JSXParserMixin.parseMaybeUnary (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10713:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10566:61)
+      at JSXParserMixin.parseExprOps (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10571:23)
+      at JSXParserMixin.parseMaybeConditional (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10548:23)
+      at JSXParserMixin.parseMaybeAssign (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10511:21)
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10481:39
+      at JSXParserMixin.allowInAnd (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12085:16)
+      at JSXParserMixin.parseMaybeAssignAllowIn (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:10481:17)
+      at JSXParserMixin.parseVar (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:13018:91)
+      at JSXParserMixin.parseVarStatement (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12864:10)
+      at JSXParserMixin.parseStatementContent (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12479:23)
+      at JSXParserMixin.parseStatementLike (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12396:17)
+      at JSXParserMixin.parseModuleItem (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12373:17)
+      at JSXParserMixin.parseBlockOrModuleBlockBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12950:36)
+      at JSXParserMixin.parseBlockBody (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12943:10)
+      at JSXParserMixin.parseProgram (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12270:10)
+      at JSXParserMixin.parseTopLevel (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:12260:25)
+      at JSXParserMixin.parse (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:14110:10)
+      at parse (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\parser\lib\index.js:14144:38)
+      at parser (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\core\lib\transformation\normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:261:32)
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:223:11)
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:189:28
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:113:33
+      at step (C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:287:14)
+      at C:\Users\my\Desktop\gogo\Ecommerce-Store-Forever-MERN\admin\node_modules\gensync\index.js:273:13
+[2m10:03:00 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Add.jsx, /src/index.css[22m
+[2m10:12:27 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Add.jsx, /src/index.css[22m
+[2m10:18:53 pm[22m [36m[1m[vite][22m[39m [32mvite.config.js changed, restarting server...[39m
+[2m10:18:53 pm[22m [36m[1m[vite][22m[39m server restarted.
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5174[22m/admin/[39m

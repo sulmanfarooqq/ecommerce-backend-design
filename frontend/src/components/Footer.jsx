@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { assets } from "../assets/frontend_assets/assets";
 
 const Footer = () => {
   const socialIcons = [
@@ -51,13 +52,8 @@ const Footer = () => {
       <div className="mx-auto max-w-[1280px] px-3 sm:px-4 lg:px-6">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr_1fr_1fr_1fr]">
           <div className="space-y-6">
-            <Link to="/" className="flex items-center gap-2">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--brand)] text-lg font-black text-white">
-                F
-              </span>
-              <span className="text-2xl font-black tracking-tight text-[var(--ink)]">
-                Forever
-              </span>
+            <Link to="/" className="flex items-center">
+              <img src={assets.logo} className="h-10 sm:h-12" alt="Forever Logo" />
             </Link>
             <p className="max-w-xs text-sm leading-relaxed text-[var(--ink-muted)]">
               Redefining the modern wardrobe with timeless pieces and sustainable craftsmanship. Join our global community of style enthusiasts.

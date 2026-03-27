@@ -48,18 +48,8 @@ const Navbar = () => {
             <img src={assets.menu_icon} className="h-4 w-4" alt="menu" />
           </button>
 
-          <Link to="/" className="flex min-w-fit items-center gap-2">
-            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--brand)] text-sm font-bold text-white">
-              F
-            </span>
-            <div>
-              <p className="text-lg font-extrabold tracking-tight text-[var(--brand)]">
-                Forever
-              </p>
-              <p className="hidden text-[11px] text-[var(--ink-muted)] sm:block">
-                Premium Store
-              </p>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img src={assets.logo} className="h-8 sm:h-10" alt="Forever Logo" />
           </Link>
 
           <form
@@ -150,9 +140,11 @@ const Navbar = () => {
           className={`h-full w-[84%] max-w-sm bg-white p-5 shadow-2xl transition-transform ${visible ? "translate-x-0" : "-translate-x-full"}`}
         >
           <div className="mb-6 flex items-center justify-between">
-            <div>
-              <p className="text-lg font-bold text-[var(--brand)]">Brand</p>
-              <p className="text-xs text-[var(--ink-muted)]">Marketplace menu</p>
+            <div className="flex flex-col">
+              <img src={assets.logo} className="h-8 self-start" alt="Forever Logo" />
+              <p className="mt-1 text-[10px] font-medium uppercase tracking-widest text-[var(--ink-muted)]">
+                Marketplace Menu
+              </p>
             </div>
             <button
               onClick={() => setVisible(false)}

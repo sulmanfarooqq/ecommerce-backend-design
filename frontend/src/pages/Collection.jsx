@@ -1,15 +1,35 @@
 import React, { useContext, useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { ShopContext } from "../contexts/ShopContext";
 import ProductItem from "../components/ProductItem";
 
 const Collection = () => {
   const { products, search, showSearch } = useContext(ShopContext);
+  const [searchParams] = useSearchParams();
   const [showFilter, setShowFilter] = useState(false);
   const [filterProducts, setFilterProducts] = useState([]);
   const [category, setCategory] = useState([]);
   const [subCategory, setSubCategory] = useState([]);
   const [sortType, setSortType] = useState("relevant");
   const [viewMode, setViewMode] = useState("grid");
+
+  // Load filters from URL on mount
+  useEffect(() => {
+    const categoryParam = searchParams.get("category");
+    const subCategoryParam = searchParams.get("subCategory");
+
+    if (categoryParam) {
+      setCategory(categoryParam.split(","));
+    } else {
+      setCategory([]);
+    }
+
+    if (subCategoryParam) {
+      setSubCategory(subCategoryParam.split(","));
+    } else {
+      setSubCategory([]);
+    }
+  }, [searchParams]);
 
   const toggleCategory = (event) => {
     const { value } = event.target;
@@ -51,6 +71,9 @@ const Collection = () => {
       case "high-low":
         productsCopy.sort((a, b) => b.price - a.price);
         break;
+      case "newest":
+        productsCopy.reverse(); // Assuming original list is semi-newest
+        break;
       default:
         break;
     }
@@ -84,24 +107,36 @@ const Collection = () => {
             </div>
 
             <div className={`mt-4 space-y-4 ${showFilter ? "block" : "hidden lg:block"}`}>
-              <div className="market-soft-card p-4">
-                <p className="text-sm font-bold">Category</p>
-                <div className="mt-3 space-y-2 text-sm text-[var(--ink-muted)]">
+              <div className="market-soft-card p-5">
+                <p className="text-sm font-black uppercase tracking-widest text-[var(--ink)]">Categories</p>
+                <div className="mt-4 space-y-3 text-sm text-[var(--ink-muted)]">
                   {["Men", "Women", "Kids"].map((item) => (
-                    <label key={item} className="flex items-center gap-2">
-                      <input onChange={toggleCategory} type="checkbox" value={item} />
+                    <label key={item} className="flex cursor-pointer items-center gap-3 transition-colors hover:text-[var(--brand)]">
+                      <input 
+                        onChange={toggleCategory} 
+                        type="checkbox" 
+                        value={item} 
+                        checked={category.includes(item)}
+                        className="h-4 w-4 rounded border-[var(--line-soft)] text-[var(--brand)] focus:ring-[var(--brand)]" 
+                      />
                       {item}
                     </label>
                   ))}
                 </div>
               </div>
 
-              <div className="market-soft-card p-4">
-                <p className="text-sm font-bold">Type</p>
-                <div className="mt-3 space-y-2 text-sm text-[var(--ink-muted)]">
-                  {["Topwear", "Bottomwear", "Winterwear"].map((item) => (
-                    <label key={item} className="flex items-center gap-2">
-                      <input onChange={toggleSubCategory} type="checkbox" value={item} />
+              <div className="market-soft-card p-5">
+                <p className="text-sm font-black uppercase tracking-widest text-[var(--ink)]">Type</p>
+                <div className="mt-4 space-y-3 text-sm text-[var(--ink-muted)]">
+                  {["Topwear", "Bottomwear", "Winterwear", "Footwear", "Accessories", "Beauty"].map((item) => (
+                    <label key={item} className="flex cursor-pointer items-center gap-3 transition-colors hover:text-[var(--brand)]">
+                      <input 
+                        onChange={toggleSubCategory} 
+                        type="checkbox" 
+                        value={item} 
+                        checked={subCategory.includes(item)}
+                        className="h-4 w-4 rounded border-[var(--line-soft)] text-[var(--brand)] focus:ring-[var(--brand)]"
+                      />
                       {item}
                     </label>
                   ))}

@@ -11,23 +11,23 @@ const Hero = () => {
         </p>
         <div className="space-y-4 text-sm font-medium text-[var(--ink)]">
           {[
-            "New Arrivals",
-            "Women's Wear",
-            "Men's Collection",
-            "Kids & Baby",
-            "Bags & Footwear",
-            "Jewelry & Watches",
-            "Beauty & Fragrance",
-            "Home & Lifestyle",
-            "Gift Cards",
+            { label: "New Arrivals", path: "/collection" },
+            { label: "Women's Wear", path: "/collection?category=Women" },
+            { label: "Men's Collection", path: "/collection?category=Men" },
+            { label: "Kids & Baby", path: "/collection?category=Kids" },
+            { label: "Bags & Footwear", path: "/collection?subCategory=Footwear" },
+            { label: "Jewelry & Watches", path: "/collection?subCategory=Accessories" },
+            { label: "Beauty & Fragrance", path: "/collection?subCategory=Beauty" },
+            { label: "Home & Lifestyle", path: "/collection?subCategory=Lifestyle" },
+            { label: "Gift Cards", path: "/collection" },
           ].map((item) => (
-            <button
-              key={item}
+            <Link
+              key={item.label}
+              to={item.path}
               className="block w-full text-left transition-colors hover:text-[var(--brand)]"
-              type="button"
             >
-              {item}
-            </button>
+              {item.label}
+            </Link>
           ))}
         </div>
       </aside>
